@@ -7,4 +7,4 @@ const getTrainnings = async () => {
   return trainings;
 };
 
-export { getTrainnings };
+export { getTrainnings as getTrainings };

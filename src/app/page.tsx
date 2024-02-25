@@ -1,7 +1,7 @@
 import { Heading, Hero, HomeLayout, Presentation } from "@/components";
 
 export default function Home() {
-  useHome()
+  // useHome()
   return (
     <HomeLayout>
       <main className="flex flex-col items-center justify-center">
