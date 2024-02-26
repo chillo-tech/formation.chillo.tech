@@ -6,7 +6,9 @@ import {
   Heading,
   Hero,
   Presentation,
+  Pricings,
   Testimonials,
+  WhyCodeWithMe,
 } from "..";
 import { useHome } from "@/hooks";
 
@@ -16,6 +18,7 @@ const HomeMain = ({ trainings }: { trainings: ITraining[] }) => {
     <main className="flex flex-col items-center justify-center">
       <Hero />
       <Presentation />
+      <WhyCodeWithMe />
       <div className="">
         <div className="container mx-auto">
           <Heading
@@ -27,7 +30,9 @@ const HomeMain = ({ trainings }: { trainings: ITraining[] }) => {
           <CoursesView trainings={state.trainings} />
         </div>
       </div>
+
       <Testimonials />
+      <Pricings />
     </main>
   );
 };

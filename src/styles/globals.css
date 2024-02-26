@@ -27,3 +27,33 @@ h1 {
   letter-spacing: -0.025em;
   color: rgb(255 255 255 / 1);
 }
+
+.swiper_container_testimonials > .swiper-wrapper {
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.swiper_container_testimonials {
+  padding: 20px !important;
+  position: relative;
+}
+
+.swiper-slide-next,
+.swiper-slide-prev {
+  opacity: 0.6 !important;
+  position: relative !important;
+}
+
+.swiper-slide-next::after,
+.swiper-slide-prev::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: #0000002a;
+  backdrop-filter: blur(1px);
+}

@@ -2,29 +2,19 @@ import { Rate } from "@/components";
 import Image from "next/image";
 import React from "react";
 
-const Card = ({
+const TestimonialCard = ({
   message,
   name,
   photoUrl,
   rate,
-  translateX,
-  opacity,
 }: {
   message: string;
   name: string;
   rate: number;
   photoUrl: string;
-  translateX: number;
-  opacity: number;
 }) => {
   return (
-    <div
-      className="h-full rounded-2xl lg:p-11 p-5 drop-shadow-md"
-      style={{
-        transform: `translateX(${translateX})`,
-        opacity,
-      }}
-    >
+    <div className="h-full rounded-2xl lg:p-11 p-5 drop-shadow-md bg-white select-none">
       <figure>
         <blockquote>
           <p>"{message}"</p>
@@ -40,9 +30,9 @@ const Card = ({
           />
           <div className="flex flex-col gap-3">
             <p className="font-bold">{name}</p>
-            <p>
+            <div>
               <Rate rate={rate} />
-            </p>
+            </div>
           </div>
         </figcaption>
       </figure>
@@ -50,4 +40,4 @@ const Card = ({
   );
 };
 
-export default Card;
+export { TestimonialCard };

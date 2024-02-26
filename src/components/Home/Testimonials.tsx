@@ -10,7 +10,7 @@ const Testimonials = () => {
     reviews: 3394,
   };
   return (
-    <div className="py-5 my-5">
+    <section className="py-5 my-5">
       <div className="container">
         <Heading title="Ce que disent mes élèves" label="TÉMOIGNAGES" />
         <div className="flex items-center gap-2 justify-center">
@@ -25,10 +25,10 @@ const Testimonials = () => {
               {view.reviews} avis
             </Link>
           </p>
-          <TestimonialCarousel />
         </div>
       </div>
-    </div>
+      <TestimonialCarousel />
+    </section>
   );
 };
 
