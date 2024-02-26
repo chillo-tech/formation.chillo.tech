@@ -16,9 +16,10 @@ interface ITraining {
   lifetimeAcces: boolean;
   learnAtYourOwnPace: boolean;
   subTitle: string;
+  price: IPrice;
   description: any;
   promotionVideo: string;
-  image: number;
+  image: IImage;
   onSale: boolean;
   status: string;
   chapters: {
@@ -40,6 +41,31 @@ interface ITraining {
   prerequisites: {
     prerequisite_id: IPrerequisite;
   }[];
+}
+
+interface IImage {
+  id: number;
+  status: string;
+  user_created: string;
+  date_created: string;
+  user_updated: string;
+  date_updated: string;
+  link: string;
+  description: string;
+  name: string;
+  videos: any[];
+}
+
+interface IPrice {
+  id: number;
+  user_created: string;
+  date_created: string;
+  user_updated: any;
+  date_updated: any;
+  value: number;
+  currency: string;
+  description: string;
+  trainings: number[];
 }
 
 interface IChapter {

@@ -1,30 +1,24 @@
 "use client";
 import { NavbarLinks } from "@/data";
+import { useNavbar } from "@/hooks";
+import classNames from "classnames";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
 import { Logo } from "..";
 
 const Navbar = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef<HTMLElement>(null);
-  useEffect(() => {
-    const handler = (event: any) => {
-      if (isVisible && ref.current && !ref.current.contains(event.target)) {
-        setIsVisible(false);
-      }
-    };
-    document.addEventListener("mousedown", handler);
-    document.addEventListener("touchstart", handler);
-    return () => {
-      // Cleanup the event listener
-      document.removeEventListener("mousedown", handler);
-      document.removeEventListener("touchstart", handler);
-    };
-  }, [isVisible]);
+  const { fixed, isVisible, ref, setIsVisible } = useNavbar();
+
   return (
-    <nav ref={ref}>
-      <div className="container mx-auto my-3 flex justify-between items-center relative">
+    <nav
+      ref={ref}
+      className={`w-full  ${classNames({
+        "shadow-md fixed top-0 left-0 bg-white border-l-[1rem] border-r-[1rem] border-l-blue-500 border-r-blue-500 z-50":
+          fixed,
+        relative: !fixed,
+      })}`}
+    >
+      <div className=" container mx-auto my-3 flex justify-between items-center relative">
         <Logo />
         <div className="hidden gap-3 items-center md:flex">
           {NavbarLinks.map((link, index) => (
@@ -62,7 +56,7 @@ const Navbar = () => {
             ))}
             <button
               style={{ color: "white" }}
-              className="rounded-[25px] bg-[#8244ff] py-1 px-5 w-fit"
+              className="rounded-[25px] bg-green-300 py-1 px-5 w-fit"
             >
               Espace membre
             </button>
