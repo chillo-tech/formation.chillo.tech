@@ -23,7 +23,6 @@ const TestimonialCarousel = () => {
           grabCursor
           centeredSlides
           loop
-          slidesPerView={3}
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
@@ -31,6 +30,14 @@ const TestimonialCarousel = () => {
             scale: 0.8,
             slideShadows: false,
             modifier: 2.5,
+          }}
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
           }}
           className="swiper_container_testimonials"
         >

@@ -45,6 +45,11 @@ h1 {
   position: relative !important;
 }
 
+.swiper_container_testimonials .swiper-slide-next {
+  position: relative !important;
+  right: 20px !important;
+}
+
 .swiper-slide-next::after,
 .swiper-slide-prev::after {
   content: "";
@@ -56,4 +61,12 @@ h1 {
   z-index: 10;
   background: #0000002a;
   backdrop-filter: blur(1px);
+}
+
+@media only screen and (max-width: 768px) {
+  .swiper-slide-active > div {
+    width: 80% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }

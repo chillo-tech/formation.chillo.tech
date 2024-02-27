@@ -60,7 +60,7 @@ const PricingSubscriptionCard = ({
             </ul>
           </div>
           <Link
-            className="group inline-block px-6 py-3 text-sm no-underline uppercase text-center text-white tracking-wider font-medium md:font-semibold rounded-full bg-gradient-to-r from-pink-500 to-blue-500  transition-all duration-200 ease-out hover:text-white hover:no-underline undefined"
+            className="group inline-block px-6 py-3 text-sm no-underline uppercase text-center text-white tracking-wider font-medium md:font-semibold rounded-full bg-gradient-to-r from-green-300 to-blue-500  transition-all duration-200 ease-out hover:text-white hover:no-underline undefined"
             href="#"
           >
             Abonnez-vous et Economisez

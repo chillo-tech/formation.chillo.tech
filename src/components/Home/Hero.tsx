@@ -3,8 +3,8 @@ import { FaArrowRight } from "react-icons/fa6";
 const Hero = () => {
   return (
     <section className="mt-2 mb-4 py-2">
-      <div className="container mx-auto flex gap-9">
-        <div className="flex flex-col gap-4">
+      <div className="container mx-auto flex gap-9 flex-col md:flex-row">
+        <div className="max-w-[90%] mx-auto sm:max-w-fit flex flex-col gap-4">
           <h1 className="text-heading font-extrabold text-5xl my-4">
             Devenez l'<span className="text-green-300">ingénieur logiciel</span>{" "}
             que les entreprises{" "}
@@ -23,7 +23,7 @@ const Hero = () => {
             <FaArrowRight color="white" />
           </button>
         </div>
-        <div className="w-1/2 shrink-0 px-2 max-w-[700px]">
+        <div className="w-[90%] mx-auto md:w-1/2 shrink-0 px-2 max-w-[700px]">
           <div className="bg-gradient-to-r from-blue-700 via-indigo-800 to-blue-900 rounded-lg select-none relative">
             <div className="flex flex-row">
               <div className="h-[3px] bg-gradient-to-r from-transparent via-green-400 to-blue-500 w-full"></div>

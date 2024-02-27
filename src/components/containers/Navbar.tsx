@@ -13,14 +13,14 @@ const Navbar = () => {
     <nav
       ref={ref}
       className={`w-full  ${classNames({
-        "shadow-md fixed top-0 left-0 bg-white border-l-[1rem] border-r-[1rem] border-l-blue-500 border-r-blue-500 z-50":
+        "max-w-[100vw] shadow-md fixed top-0 left-0 bg-white border-l-[1rem] border-r-[1rem] border-l-blue-500 border-r-blue-500 z-50":
           fixed,
         relative: !fixed,
       })}`}
     >
-      <div className=" container mx-auto my-3 flex justify-between items-center relative">
+      <div className="container mx-auto my-3 flex justify-between items-center relative">
         <Logo />
-        <div className="hidden gap-3 items-center md:flex">
+        <div className="hidden gap-3 items-center lg:flex">
           {NavbarLinks.map((link, index) => (
             <Link
               key={`nav-link-${link.path}-${index}`}
@@ -30,21 +30,21 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <button
-            style={{ color: "white" }}
-            className="rounded-[25px] bg-green-300 text-white py-1 px-5"
-          >
-            Espace membre
-          </button>
         </div>
         <button
-          className="flex md:hidden"
+          style={{ color: "white" }}
+          className="rounded-[25px] hidden lg:block bg-green-300 text-white py-1 px-5"
+        >
+          Tous les cours
+        </button>
+        <button
+          className="flex lg:hidden"
           onClick={() => setIsVisible((prev) => !prev)}
         >
           {isVisible ? <MdClose size={27} /> : <MdMenu size={27} />}
         </button>
         {isVisible && (
-          <div className="flex md:hidden flex-col gap-3 absolute top-[100%] w-full bg-[#0d1224]">
+          <div className="flex lg:hidden flex-col gap-3 absolute top-[100%] w-full bg-white p-3 z-50">
             {NavbarLinks.map((link, index) => (
               <Link
                 key={`nav-link-${link.path}-${index}`}
@@ -58,7 +58,7 @@ const Navbar = () => {
               style={{ color: "white" }}
               className="rounded-[25px] bg-green-300 py-1 px-5 w-fit"
             >
-              Espace membre
+              Tous les cours
             </button>
           </div>
         )}
