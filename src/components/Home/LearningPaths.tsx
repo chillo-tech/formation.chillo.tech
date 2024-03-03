@@ -20,23 +20,20 @@ const LearningPaths = () => {
     const observer = new ResizeObserver((entries) => {
       for (let entry of entries) {
         const { height } = entry.contentRect;
-        console.log(`La taille de la div a changé : ${height}`);
         setVerticalbarHeight(height);
       }
     });
 
     observer.observe(containerRef.current);
-  }, [containerRef.current]);
+    return ()=>{
+      observer.disconnect()
+}  }, [containerRef.current]);
 
   return (
     <div className="">
       <div
         className="container mx-auto px-4 pl-14 sm:px-8 relative"
         ref={containerRef}
-        onResize={(e) => {
-          console.log("changed", containerRef.current?.scrollHeight);
-          setVerticalbarHeight(containerRef.current?.scrollHeight || 0);
-        }}
       >
         <div className="h-full absolute left-2 top-0">
           <LearningPathComponents.VerticlaBar
