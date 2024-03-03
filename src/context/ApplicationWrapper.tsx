@@ -2,7 +2,7 @@ import React, { createContext, useReducer } from "react";
 import { initialState, reducer } from "./ApplicationReducer";
 import { TAction, TState } from "@/types";
 
-const ApplicationContext = createContext<{
+export const ApplicationContext = createContext<{
   state: TState;
   dispatch: React.Dispatch<TAction>;
 }>({
@@ -21,9 +21,4 @@ const ApplicationWrapper = ({ children }: { children: React.ReactNode }) => {
 
 export { ApplicationWrapper };
 
-export const getServerSideProps = async (context: any) => {
-  console.log("context", context);
-  return {
-    props: {},
-  };
-};
+

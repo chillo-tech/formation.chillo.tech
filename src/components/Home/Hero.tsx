@@ -1,19 +1,29 @@
 import { FaArrowRight } from "react-icons/fa6";
+import { TextSlideShow } from "..";
 
 const Hero = () => {
   return (
     <section className="mt-2 mb-4 py-2">
-      <div className="container mx-auto flex gap-9">
-        <div className="flex flex-col gap-4">
-          <h1 className="text-heading font-extrabold text-5xl my-4">
-            Devenez l'<span className="text-green-300">ingénieur logiciel</span>{" "}
-            que les entreprises{" "}
-            <span className="text-blue-500">adorent embaucher</span>
+      <div className="container mx-auto flex gap-9 flex-col md:flex-row md:items-center">
+        <div className="max-w-[90%] mx-auto sm:max-w-fit flex flex-col gap-4">
+          <h1 className="text-heading font-extrabold text-5xl my-4 flex flex-wrap items-center gap-2">
+            formez vous{" "}
+            <TextSlideShow
+              wordDuration={1000}
+              texts={[
+                { value: "JAVA", prefix: "sur" },
+                { value: "Spring", prefix: "sur" },
+                { value: "Docker", prefix: "sur" },
+                { value: "Kubernetes", prefix: "sur" },
+                { value: "RabbitMQ", prefix: "sur" },
+                { value: "Fullstack", prefix: "en" },
+                { value: "DevOps", prefix: "en" },
+              ]}
+            />
           </h1>
           <p className="font-2xl text-heading">
-            Tous les <span className="font-bold">cours de codage</span> dont
-            vous avez besoin pour exceller{" "}
-            <span className="font-bold">au même endroit.</span>
+            Trouvez <span className="font-bold">un boulot</span> et devenez{" "}
+            <span className="font-bold">financierement independant!</span>
           </p>
           <button
             style={{ color: "white" }}
@@ -23,7 +33,7 @@ const Hero = () => {
             <FaArrowRight color="white" />
           </button>
         </div>
-        <div className="w-1/2 shrink-0 px-2 max-w-[700px]">
+        <div className="w-[90%] mx-auto md:w-1/2 shrink-0 px-2 max-w-[700px]">
           <div className="bg-gradient-to-r from-blue-700 via-indigo-800 to-blue-900 rounded-lg select-none relative">
             <div className="flex flex-row">
               <div className="h-[3px] bg-gradient-to-r from-transparent via-green-400 to-blue-500 w-full"></div>
