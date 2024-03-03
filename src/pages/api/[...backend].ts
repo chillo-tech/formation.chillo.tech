@@ -5,6 +5,7 @@ import { axiosInstance } from "@/services";
 async function handler(req: NextApiRequest, res: NextApiResponse<any>) {
   try {
     const { url: backendUrl = "" } = req;
+    
     if (req.method === "POST") {
       const { data } = await axiosInstance.post(`${backendUrl}`, req.body);
       return res.status(200).json(data);
