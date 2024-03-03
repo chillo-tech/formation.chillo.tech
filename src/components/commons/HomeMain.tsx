@@ -1,18 +1,15 @@
+import { useHome } from "@/hooks";
 import { ITraining } from "@/types";
-import React from "react";
 import {
-  CourseCard,
   CoursesView,
   Heading,
   Hero,
   LearningPaths,
-  Presentation,
   Pricings,
   Statistics,
   Testimonials,
   WhyCodeWithMe,
 } from "..";
-import { useHome } from "@/hooks";
 
 const HomeMain = ({ trainings }: { trainings: ITraining[] }) => {
   const { state } = useHome({ trainings });
