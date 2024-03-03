@@ -10,7 +10,7 @@ function ContactPage() {
       <Head>
         <title> Chillo | Contactez-nous</title>
       </Head>
-      <section className="p-5 py-12 md:px-24 lg:px-48 xl:px-56 flex flex-col space-y-10">
+      <section className="p-5 py-12 px-1 sm:px-10 md:px-24 lg:px-48 xl:px-56 flex flex-col space-y-10">
         <div className="space-y-4 flex flex-col items-center justify-between">
           <h1
             className={cn(

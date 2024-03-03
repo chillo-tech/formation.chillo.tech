@@ -69,66 +69,61 @@ const ContactForm = () => {
   };
 
   return (
-    <>
-      <Form {...form}>
-        <form
-          onSubmit={form.handleSubmit(onSubmit)}
-          className="w-full px-8 mx-auto space-y-6"
-        >
-          <legend>
-            Nous sommes ravis de vous accueillir sur notre page de contact.
-            <br /> <br />
-            Que vous ayez un projet en tête ou que vous cherchiez des conseils,
-            <br />
-            notre équipe de développeurs expérimentés est là pour vous
-            accompagner.
-          </legend>
-          <FormField
-            control={form.control}
-            name={"email"}
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Votre email</FormLabel>
-                <FormControl>
-                  <Input
-                    type={"email"}
-                    placeholder=""
-                    {...field}
-                    className="w-full"
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+    <Form {...form}>
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="w-full px-3 py-4 sm:px-8 mx-auto space-y-6"
+      >
+        <legend>
+          Nous sommes ravis de vous accueillir sur notre page de contact.
+          <br /> <br />
+          Que vous ayez un projet en tête ou que vous cherchiez des conseils,
+          <br />
+          notre équipe de développeurs expérimentés est là pour vous
+          accompagner.
+        </legend>
+        <FormField
+          control={form.control}
+          name={"email"}
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Votre email</FormLabel>
+              <FormControl>
+                <Input
+                  type={"email"}
+                  placeholder=""
+                  {...field}
+                  className="w-full"
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-          <FormField
-            control={form.control}
-            name="message"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Votre message</FormLabel>
-                <FormControl>
-                  <Textarea placeholder="" className="resize-none" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <Button variant={"primary"} type="submit">
-            Envoyez
-          </Button>
-          <Separator className="my-6 bg-light-gray" />
-          <FormDescription className="text-black/70">
-            Merci de considérer nos services pour concrétiser votre vision. |
-            <span className="font-semibold text-blue">
-              {siteConfig.appName}
-            </span>
-            .
-          </FormDescription>
-        </form>
-      </Form>
-    </>
+        <FormField
+          control={form.control}
+          name="message"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Votre message</FormLabel>
+              <FormControl>
+                <Textarea placeholder="" className="resize-none" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <Button variant={"primary"} type="submit">
+          Envoyez
+        </Button>
+        <Separator className="my-6 bg-light-gray" />
+        <FormDescription className="text-black/70">
+          Merci de considérer nos services pour concrétiser votre vision. |
+          <span className="font-semibold text-blue">{siteConfig.appName}</span>.
+        </FormDescription>
+      </form>
+    </Form>
   );
 };
 
