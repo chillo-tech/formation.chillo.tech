@@ -1,11 +1,11 @@
 import { ApplicationContext } from "@/context";
+import { categories } from "@/data/Trainings/Categories";
 import { ITraining } from "@/types";
 import { useContext, useEffect } from "react";
 import { Heading } from ".";
-import { SearchTrainings } from "./SearchTrainings";
+import { CourseCard } from "..";
 import { FilterTrainings } from "./FilterTrainings";
-import { CoursesView } from "..";
-import { categories } from "@/data/Trainings/Categories";
+import { SearchTrainings } from "./SearchTrainings";
 
 const AllTrainingsMain = ({ trainings }: { trainings: ITraining[] }) => {
   const { state, dispatch } = useContext(ApplicationContext);
@@ -23,7 +23,22 @@ const AllTrainingsMain = ({ trainings }: { trainings: ITraining[] }) => {
           <SearchTrainings trainings={trainings} />
           <FilterTrainings options={categories} />
         </div>
-        <CoursesView trainings={state.trainings} />
+        <div className="w-full grid grid-cols-1 justify-items-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 my-6">
+          {trainings.map((training, index) => {
+            return (
+              <CourseCard
+                key={`training-${index}`}
+                hours={training.hours}
+                price={training.price.value}
+                image={training.image.link}
+                subTitle={training.subTitle}
+                title={training.title}
+                slug={training.slug}
+                backgroundColor={training.image.backgroundColor}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );

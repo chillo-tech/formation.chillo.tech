@@ -5,7 +5,7 @@ const NavbarLinks = [
   },
   {
     label: "Cours",
-    path: "courses",
+    path: "trainings",
   },
   {
     label: "Parcours d'apprentissage",
@@ -17,7 +17,7 @@ const NavbarLinks = [
   },
   {
     label: "Contact",
-    path: "contact",
+    path: "contact-us",
   },
 ];
 
