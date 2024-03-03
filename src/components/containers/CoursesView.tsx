@@ -28,7 +28,7 @@ const CoursesView = ({ trainings }: { trainings: ITraining[] }) => {
       >
         Tous les cours
       </Link>
-      <p className="text-lg my-4">
+      <p className="text-center md:text-justify text-lg my-4">
         Vous ne savez pas par où commencer ? Consultez nos{" "}
         <Link
           href="#"

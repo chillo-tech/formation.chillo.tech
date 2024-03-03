@@ -6,7 +6,6 @@ import { HorizontalBar } from "./HorizontalBar";
 
 const Slider = ({ childs }: { type: "slider"; childs: TCard[] }) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const superContainerRef = useRef<HTMLDivElement>(null);
   const handleNext = () => {
     containerRef.current?.scrollBy({ left: 300, behavior: "smooth" });
   };
@@ -16,11 +15,10 @@ const Slider = ({ childs }: { type: "slider"; childs: TCard[] }) => {
   };
   return (
     <div
-      className="relative px-5 overflow-hidden"
+      className="relative px-5 overflow-hidden !max-w-full md:max-w-full"
       style={{
         maxWidth: "calc(100vw - 300px)",
       }}
-      ref={superContainerRef}
     >
       <button
         className="p-4 h-fit w-fit bg-white shadow-sm rounded-[50%] cursor-pointer absolute top-[50%] left-0 z-10"

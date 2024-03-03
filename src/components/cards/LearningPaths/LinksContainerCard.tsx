@@ -10,7 +10,7 @@ const LinksContainerCard = ({ data }: { data: TLinksContainer }) => {
         background: data.background || "transparent",
         color: data.textColor || "inherit",
       }}
-      className="rounded-md shadow-sm p-4 shrink-0"
+      className="rounded-md shadow-sm p-4 shrink-0 h-full"
     >
       <h4 className="pb-4">{data.title}</h4>
       <div className="grid gap-2">

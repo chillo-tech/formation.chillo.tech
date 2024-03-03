@@ -10,7 +10,7 @@ const CursusHeader = ({
   subTitle?: string;
 }) => {
   return (
-    <div className="min-w-[150px] max-w-[200px]">
+    <div className="md:min-w-[150px] md:max-w-[200px]">
       {label && <label className="text-blue-500 text-md">{label}</label>}
       {title && (
         <h4 className="py-3 text-heading text-2xl text-bold">{title}</h4>

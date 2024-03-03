@@ -6,7 +6,7 @@ const SimpleCard = ({ data }: { data: TCard }) => {
   return (
     <LinkContainer href={data.link}>
       <div
-        className="flex flex-col rounded-md shadow-sm overflow-hidden shrink-0"
+        className="flex flex-col rounded-md shadow-md overflow-hidden shrink-0 h-full "
         style={{
           background: data.background || "transparent",
         }}

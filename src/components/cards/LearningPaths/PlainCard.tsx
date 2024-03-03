@@ -5,7 +5,7 @@ import React from "react";
 const PlainCard = ({ data }: { data: TCardPlain }) => {
   return (
     <div
-      className="rounded-md shadow-sm p-4 relative shrink-0"
+      className="rounded-md shadow-sm p-4 relative shrink-0 h-full"
       style={{
         background: data.background || "transparent",
         color: data.textColor || "inherit",
