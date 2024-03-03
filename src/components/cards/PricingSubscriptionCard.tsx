@@ -15,12 +15,12 @@ const PricingSubscriptionCard = ({
   return (
     <div className="relative w-full md:max-w-[450px] shadow-md rounded-md">
       <div className="absolute -top-10 -left-3 md:-top-8 md:-left-3 lg:-left-10 lg:-top-12 w-24 z-10">
-        <Image
+        {/* <Image
           src="/images/money-back.svg"
           height={95}
           width={95}
           alt="money-back"
-        />
+        /> */}
       </div>
       <div className="border border-gray-100  transition-colors duration-200 ease-in-out overflow-hidden rounded-l relative ">
         <div className="w-full flex justify-center">

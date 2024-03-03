@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
 
 const CourseCard = ({
   slug,
@@ -11,6 +10,7 @@ const CourseCard = ({
   price,
   currency = "€",
   discount,
+  backgroundColor,
 }: {
   slug: string;
   image: string;
@@ -18,22 +18,33 @@ const CourseCard = ({
   hours: number;
   subTitle: string;
   price: number;
+  backgroundColor?: string;
   currency?: string;
   discount?: number;
 }) => {
   const link = `/trainings/${slug}`;
   return (
     <div className="max-w-[340px] border border-transparent rounded-md bg-white shadow-md hover:border-blue-500 transition-all">
-      <Link href={link}>
-        <Image
-          loading="lazy"
-          alt={`course-${title}`}
-          src={image}
-          width={300}
-          height={190}
-          className="object-cover h-1/2 shrink-1 grow-0 rounded-t-md w-full"
-        />
-      </Link>
+      <div className="h-1/2 overflow-hidden">
+        <Link
+          href={link}
+          style={{
+            backgroundColor: backgroundColor,
+          }}
+        >
+          <Image
+            loading="lazy"
+            alt={`course-${title}`}
+            src={image}
+            width={300}
+            height={190}
+            style={{
+              backgroundColor: backgroundColor,
+            }}
+            className="object-contain shrink-1 py-4 h-[revert-layer] grow-0 rounded-t-md w-full"
+          />
+        </Link>
+      </div>
       <div className="rounded-b-md p-5">
         <p className="flex items-center justify-between">
           <Link href={link}>

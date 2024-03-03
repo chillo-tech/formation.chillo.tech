@@ -4,11 +4,9 @@ import { mockSections } from "@/data";
 
 const WhyCodeWithMe = () => {
   return (
-    <section className="container max-w-[1100px]">
+    <section className="container max-w-[1100px] mx-auto">
       <div className="container px-4">
-        <Heading
-          title="Pourquoi coder avec Achille ?"
-        />
+        <Heading title="Nos valeurs" />
         <div>
           {mockSections.map((section, index) => {
             return (

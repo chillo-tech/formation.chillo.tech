@@ -1,6 +1,5 @@
-import { Rate } from "@/components";
+import { YellowRate } from "@/components";
 import Image from "next/image";
-import React from "react";
 
 const TestimonialCard = ({
   message,
@@ -26,12 +25,12 @@ const TestimonialCard = ({
             src={photoUrl}
             width={40}
             height={40}
-            className="rounded-full"
+            className="rounded-[50%] h-[40px] w-[40px] object-cover"
           />
           <div className="flex flex-col gap-3">
             <p className="font-bold">{name}</p>
             <div>
-              <Rate rate={rate} />
+              <YellowRate rate={rate} />
             </div>
           </div>
         </figcaption>

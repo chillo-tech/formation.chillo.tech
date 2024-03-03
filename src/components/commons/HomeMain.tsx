@@ -5,8 +5,10 @@ import {
   CoursesView,
   Heading,
   Hero,
+  LearningPaths,
   Presentation,
   Pricings,
+  Statistics,
   Testimonials,
   WhyCodeWithMe,
 } from "..";
@@ -15,9 +17,10 @@ import { useHome } from "@/hooks";
 const HomeMain = ({ trainings }: { trainings: ITraining[] }) => {
   const { state } = useHome({ trainings });
   return (
-    <main className="flex flex-col items-center justify-center">
+    <main className="flex flex-col justify-center">
       <Hero />
-      <Presentation />
+      <Statistics />
+      {/* <Presentation /> */}
       <WhyCodeWithMe />
       <div className="">
         <div className="container mx-auto">
@@ -30,7 +33,7 @@ const HomeMain = ({ trainings }: { trainings: ITraining[] }) => {
           <CoursesView trainings={state.trainings} />
         </div>
       </div>
-
+      <LearningPaths />
       <Testimonials />
       <Pricings />
     </main>

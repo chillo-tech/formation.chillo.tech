@@ -52,6 +52,7 @@ interface IImage {
   date_updated: string;
   link: string;
   description: string;
+  backgroundColor?: string;
   name: string;
   videos: any[];
 }

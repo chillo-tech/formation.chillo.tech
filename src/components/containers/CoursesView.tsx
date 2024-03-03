@@ -17,15 +17,16 @@ const CoursesView = ({ trainings }: { trainings: ITraining[] }) => {
               subTitle={training.subTitle}
               title={training.title}
               slug={training.slug}
+              backgroundColor={training.image.backgroundColor}
             />
           );
         })}
       </div>
       <Link
         href="/trainings"
-        className="rounded-[25px] bg-green-300 text-white py-2 px-5 w-fit h-fit mx-auto text-lg"
+        className="rounded-[25px] bg-green-300 text-white py-2 px-5 w-fit h-fit mx-auto text-2xl font-bold"
       >
-        TOUS LES COURS
+        Tous les cours
       </Link>
       <p className="text-lg my-4">
         Vous ne savez pas par où commencer ? Consultez nos{" "}

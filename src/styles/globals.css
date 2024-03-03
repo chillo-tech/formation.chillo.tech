@@ -70,3 +70,7 @@ h1 {
     margin-right: auto !important;
   }
 }
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}

@@ -7,19 +7,19 @@ const CodeWithMeCard = ({ section }: { section: ISection }) => {
   return section.direction === "left" ? (
     <div className="flex flex-col sm:grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
       <div className="md:mx-4">
-        <div className="grid place-items-center w-12 h-12 rounded-full my-3 border border-[#838383de] bg-[#f0f0f0de]">
-          <div className="">
+        <div className="flex items-center gap-5">
+          <div className="grid place-items-center w-12 h-12 rounded-full my-3 border border-[#838383de] bg-[#f0f0f0de]">
             {iconService.getIcon(section.iconName, {
               color: section.color,
             })}
           </div>
+          <span
+            className="inline-block font-medium md:font-semibold"
+            style={{ color: section.color }}
+          >
+            {section.label}
+          </span>
         </div>
-        <span
-          className="mb-3 inline-block font-medium md:font-semibold"
-          style={{ color: section.color }}
-        >
-          {section.label}
-        </span>
         <h2 className="text-3xl">{section.title}</h2>
         <p>{section.description}</p>
       </div>
@@ -45,19 +45,19 @@ const CodeWithMeCard = ({ section }: { section: ISection }) => {
         />
       </div>
       <div className="md:mx-4">
-        <div className="grid place-items-center w-12 h-12 rounded-full my-3 border border-[#838383de] bg-[#f0f0f0de]">
-          <div className="">
+        <div className="flex items-center gap-5">
+          <div className="grid place-items-center w-12 h-12 rounded-full my-3 border border-[#838383de] bg-[#f0f0f0de]">
             {iconService.getIcon(section.iconName, {
               color: section.color,
             })}
           </div>
+          <span
+            className="inline-block font-medium md:font-semibold"
+            style={{ color: section.color }}
+          >
+            {section.label}
+          </span>
         </div>
-        <span
-          className="mb-3 inline-block font-medium md:font-semibold"
-          style={{ color: section.color }}
-        >
-          {section.label}
-        </span>
         <h2 className="text-3xl">{section.title}</h2>
         <p>{section.description}</p>
       </div>
