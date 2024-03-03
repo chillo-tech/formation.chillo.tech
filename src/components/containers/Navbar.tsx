@@ -49,7 +49,7 @@ const Navbar = () => {
               <Link
                 key={`nav-link-${link.path}-${index}`}
                 href={link.path}
-                className="py-2 px-3 hover:text-white"
+                className="py-2 px-3 hover:text-blue-500"
               >
                 {link.label}
               </Link>
