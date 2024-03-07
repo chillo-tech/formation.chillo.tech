@@ -1,6 +1,4 @@
-import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import { FaCheck } from "react-icons/fa6";
 
 const PricingSubscriptionCard = ({
@@ -10,6 +8,8 @@ const PricingSubscriptionCard = ({
     label: string;
     price: string;
     options: string[];
+    suscribeMessage?: string;
+    subscribeLabel?: string;
   };
 }) => {
   return (
@@ -63,10 +63,10 @@ const PricingSubscriptionCard = ({
             className="group inline-block px-6 py-3 text-sm no-underline uppercase text-center text-white tracking-wider font-medium md:font-semibold rounded-full bg-gradient-to-r from-green-300 to-blue-500  transition-all duration-200 ease-out hover:text-white hover:no-underline undefined"
             href="#"
           >
-            Abonnez-vous et Economisez
+            {pricing.suscribeMessage || "Abonnez-vous et Economisez"}
           </Link>
           <p className="my-2 text-sm font-semibold text-heading opacity-45">
-            Annulez à tout moment !
+            {pricing.subscribeLabel || "Annulez à tout moment !"}
           </p>
         </div>
       </div>

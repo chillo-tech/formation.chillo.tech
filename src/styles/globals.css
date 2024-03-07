@@ -39,8 +39,8 @@ h1 {
   position: relative;
 }
 
-.swiper-slide-next,
-.swiper-slide-prev {
+.swiper_container_testimonials .swiper-slide-next,
+.swiper_container_testimonials .swiper-slide-prev {
   opacity: 0.6 !important;
   position: relative !important;
 }
@@ -50,8 +50,8 @@ h1 {
   right: 20px !important;
 }
 
-.swiper-slide-next::after,
-.swiper-slide-prev::after {
+.swiper_container_testimonials .swiper-slide-next::after,
+.swiper_container_testimonials .swiper-slide-prev::after {
   content: "";
   height: 100%;
   width: 100%;
@@ -73,4 +73,58 @@ h1 {
 
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
+}
+
+.training-top-section {
+  max-width: calc(100% - 400px);
+}
+
+@keyframes textFaderIn {
+  from {
+    opacity: 0;
+    transform: translateY(25%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textFaderOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-25%);
+  }
+}
+
+.text-fader {
+  display: inline-block;
+}
+
+.text-content span.line {
+  opacity: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  animation-duration: 0.8s;
+  display: none;
+}
+
+.text-content {
+  height: 50px;
+}
+
+.text-fader .text-content.in span.line {
+  animation-name: textFaderIn;
+  display: block;
+}
+
+.text-fader .text-content.out span.line {
+  animation-name: textFaderOut;
+  display: block;
 }

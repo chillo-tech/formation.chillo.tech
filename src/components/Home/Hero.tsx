@@ -9,7 +9,6 @@ const Hero = () => {
           <h1 className="text-heading font-extrabold text-5xl my-4 flex flex-wrap items-center gap-2">
             formez vous{" "}
             <TextSlideShow
-              wordDuration={1000}
               texts={[
                 { value: "JAVA", prefix: "sur" },
                 { value: "Spring", prefix: "sur" },

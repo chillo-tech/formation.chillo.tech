@@ -35,6 +35,8 @@ const AllTrainingsMain = ({ trainings }: { trainings: ITraining[] }) => {
                 title={training.title}
                 slug={training.slug}
                 backgroundColor={training.image.backgroundColor}
+                isPreview={training.isPreview}
+                textColor={training.textColor}
               />
             );
           })}

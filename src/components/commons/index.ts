@@ -5,3 +5,6 @@ export * from "./HomeMain";
 export * from "./Rate";
 export * from "./TextSlideShow";
 export * from "./LinkContainer";
+export * from "./TrainingHome";
+export * from "./Accordion";
+export * from "./BreadCrumbs";

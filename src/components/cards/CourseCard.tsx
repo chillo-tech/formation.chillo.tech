@@ -11,6 +11,8 @@ const CourseCard = ({
   currency = "€",
   discount,
   backgroundColor,
+  isPreview,
+  textColor,
 }: {
   slug: string;
   image: string;
@@ -21,6 +23,8 @@ const CourseCard = ({
   backgroundColor?: string;
   currency?: string;
   discount?: number;
+  isPreview?: boolean;
+  textColor?: string;
 }) => {
   const link = `/trainings/${slug}`;
   return (
@@ -44,7 +48,26 @@ const CourseCard = ({
             className="object-contain shrink-1 py-4 h-[revert-layer] grow-0 rounded-t-md w-full"
           />
         </Link>
+        {isPreview && (
+          <div
+            className="p-3"
+            style={{
+              background: backgroundColor,
+              color: textColor || "white",
+            }}
+          >
+            <div
+              className="w-full mb-3 text-center text-xl font-bold border-dashed border-2"
+              style={{
+                borderColor: textColor || "white",
+              }}
+            >
+              <span>PREVIEW</span>
+            </div>
+          </div>
+        )}
       </div>
+
       <div className="rounded-b-md p-5">
         <p className="flex items-center justify-between">
           <Link href={link}>

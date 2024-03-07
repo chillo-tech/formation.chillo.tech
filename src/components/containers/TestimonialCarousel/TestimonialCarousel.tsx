@@ -1,12 +1,11 @@
 import { testimonialCards } from "@/data";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { TestimonialCard } from "./Card";
-import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 
 const TestimonialCarousel = () => {
   return (
