@@ -4,7 +4,7 @@ import { getIconForOptions } from "@/utils/getIconFunctions";
 import { useContext, useMemo } from "react";
 import { OptionCard } from ".";
 
-const OptionsTraining = () => {
+const ListCard = () => {
   const {
     state: { actualTraining: training },
   } = useContext(ApplicationContext);
@@ -85,4 +85,4 @@ const OptionsTraining = () => {
   );
 };
 
-export { OptionsTraining };
+export { ListCard };

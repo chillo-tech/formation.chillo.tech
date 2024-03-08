@@ -53,8 +53,6 @@ const TextSlide = ({
 }) => {
   const [className, setClassName] = useState("");
   useEffect(() => {
-    console.log("index", index);
-    console.log("actual", actual);
     if (actual === 0) {
       if (index === max - 1) {
         setClassName("out");

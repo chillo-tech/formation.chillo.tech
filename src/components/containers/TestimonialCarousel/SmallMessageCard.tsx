@@ -1,7 +1,7 @@
 import { YellowRate } from "@/components";
 import React from "react";
 
-const SmallCardTestimonial = ({
+const SmallMessageCard = ({
   rate,
   title,
   description,
@@ -28,4 +28,4 @@ const SmallCardTestimonial = ({
   );
 };
 
-export { SmallCardTestimonial };
+export { SmallMessageCard };

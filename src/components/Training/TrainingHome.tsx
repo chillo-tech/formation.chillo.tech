@@ -6,8 +6,8 @@ import { getRateLabel } from "@/utils/getRateLabel";
 import { useContext, useEffect, useState } from "react";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Accordion, BreadCrumbs, YellowRate } from ".";
-import { OptionsTraining, SmallCardTestimonial, TrainingHero } from "..";
+import { Accordion, BreadCrumbs, YellowRate } from "../commons";
+import { ListCard, SmallMessageCard, TrainingHero } from "..";
 
 import { FaChevronLeft, FaChevronRight, FaPlay } from "react-icons/fa6";
 import "swiper/css";
@@ -92,7 +92,7 @@ const TrainingHome = ({
                   {testimonialCards.map((card, index) => {
                     return (
                       <SwiperSlide key={`testimonial-card-${index}`}>
-                        <SmallCardTestimonial
+                        <SmallMessageCard
                           date="Septembre 19"
                           description={card.message}
                           name={card.name}
@@ -163,7 +163,7 @@ const TrainingHome = ({
             </div>
             <hr className="my-8 border-[#80808044]" />
             <div>
-              <OptionsTraining />
+              <ListCard />
             </div>
           </aside>
         </div>

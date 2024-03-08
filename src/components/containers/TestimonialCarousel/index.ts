@@ -1,3 +1,3 @@
-export * from "./TestimonialCarousel";
-export * from "./SmallCardTestimonial";
-export * from "./Card";
+export * from "./BigCarousel";
+export * from "./SmallMessageCard";
+export * from "./DetailsCard";

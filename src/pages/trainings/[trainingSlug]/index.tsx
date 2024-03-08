@@ -1,4 +1,5 @@
-import { HomeLayout, TrainingHome } from "@/components";
+import { HomeLayout } from "@/components";
+import { TrainingHome } from "@/components/Training/TrainingHome";
 import { getTrainings } from "@/services/endpoints/getTrainings";
 import { ITraining } from "@/types";
 import React from "react";

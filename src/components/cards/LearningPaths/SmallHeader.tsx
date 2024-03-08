@@ -1,6 +1,6 @@
 import React from "react";
 
-const CursusHeader = ({
+const SmallHeader = ({
   label,
   title,
   subTitle,
@@ -20,4 +20,4 @@ const CursusHeader = ({
   );
 };
 
-export { CursusHeader };
+export { SmallHeader };

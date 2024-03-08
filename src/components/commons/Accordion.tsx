@@ -7,7 +7,7 @@ import React, {
   useRef,
   useState,
 } from "react";
-import { AccordionChapter } from "../cards/AccordionChapter";
+import { BigAccordion } from "../cards/Accordion";
 
 const AccordionContext = createContext<{
   selected: number;
@@ -52,7 +52,7 @@ const Accordion = () => {
                   }
                 )}`}
               >
-                <AccordionChapter
+                <BigAccordion
                   index={index + 1}
                   chapter={chapter.Chapter_id}
                 />

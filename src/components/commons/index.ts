@@ -4,7 +4,6 @@ export * from "./Heading";
 export * from "./HomeMain";
 export * from "./Rate";
 export * from "./TextSlideShow";
-export * from "./LinkContainer";
-export * from "./TrainingHome";
+export * from "./LinkWrapper";
 export * from "./Accordion";
 export * from "./BreadCrumbs";

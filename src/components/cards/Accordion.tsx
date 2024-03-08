@@ -1,11 +1,12 @@
 import { IChapter } from "@/types";
-import React, { useContext, useEffect, useRef, useState } from "react";
-import { AccordionContext, LabelCard, LessonRow, Objective } from "..";
 import { formatMilliseconds } from "@/utils";
-import { FaChevronDown, FaChevronUp, FaStar } from "react-icons/fa6";
+import { animated, useSpring } from "@react-spring/web";
 import classNames from "classnames";
-import { useSpring, animated } from "@react-spring/web";
-const AccordionChapter = ({
+import { useContext, useEffect, useRef } from "react";
+import { FaChevronDown, FaChevronUp, FaStar } from "react-icons/fa6";
+import { AccordionContext, RowHeader, Objective } from "..";
+
+const BigAccordion = ({
   chapter,
   index,
 }: {
@@ -111,7 +112,7 @@ const AccordionChapter = ({
         )}
         <div className="grid gap-2 py-4">
           {chapter.Lessons.map((lesson, index) => {
-            return <LessonRow key={`lesson-${index}`} lesson={lesson} />;
+            return <RowHeader key={`lesson-${index}`} data={lesson} />;
           })}
         </div>
         <div>{chapter.description && <p>{chapter.description}</p>}</div>
@@ -140,4 +141,4 @@ const AccordionChapter = ({
   );
 };
 
-export { AccordionChapter };
+export { BigAccordion };

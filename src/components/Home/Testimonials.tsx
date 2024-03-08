@@ -1,10 +1,7 @@
-import { ApplicationContext } from "@/context";
 import Link from "next/link";
-import { useContext } from "react";
-import { Heading, TestimonialCarousel, YellowRate } from "..";
+import { BigCarousel, Heading, YellowRate } from "..";
 
 const Testimonials = () => {
-  const { state } = useContext(ApplicationContext);
   const view = {
     rate: 4.2,
     reviews: 3394,
@@ -27,7 +24,7 @@ const Testimonials = () => {
           </p>
         </div>
       </div>
-      <TestimonialCarousel />
+      <BigCarousel />
     </section>
   );
 };

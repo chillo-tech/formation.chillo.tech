@@ -8,7 +8,7 @@ import {
   YellowRate,
   Prerequisite,
   Target,
-  OptionsTraining,
+  ListCard,
 } from "..";
 import Image from "next/image";
 
@@ -194,7 +194,7 @@ const Hero = () => {
           )}`}
         >
           <p>APERÇU DU COURS</p>
-          <OptionsTraining />
+          <ListCard />
         </div>
       </div>
     </div>

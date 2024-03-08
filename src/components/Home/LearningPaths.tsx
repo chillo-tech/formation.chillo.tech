@@ -36,8 +36,8 @@ const LearningPaths = () => {
         className="container mx-auto px-4 md:pl-14 sm:px-8 relative"
         ref={containerRef}
       >
-        <div className="hidden md:box h-full absolute left-2 top-0">
-          <LearningPathComponents.VerticlaBar
+        <div className="hidden md:block h-full absolute left-2 top-0">
+          <LearningPathComponents.VerticalBar
             count={years.length}
             parentHeght={verticalbarHeight}
             childrenSizes={
