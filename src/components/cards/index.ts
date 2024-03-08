@@ -13,4 +13,4 @@ export * from "./PricingCard";
 export * from "./SubscriptionCard";
 export * from "./Target";
 export * from "./TrainingHero";
-
+export * from "./CodeView";

@@ -1,13 +1,13 @@
 import { ApplicationContext } from "@/context";
 import { testimonialCards } from "@/data";
 import { ITraining } from "@/types";
-import { capitalize, genOptions } from "@/utils";
+import { capitalize } from "@/utils";
 import { getRateLabel } from "@/utils/getRateLabel";
 import { useContext, useEffect, useState } from "react";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Accordion, BreadCrumbs, YellowRate } from "../commons";
 import { ListCard, SmallMessageCard, TrainingHero } from "..";
+import { Accordion, BreadCrumbs, YellowRate } from "../commons";
 
 import { FaChevronLeft, FaChevronRight, FaPlay } from "react-icons/fa6";
 import "swiper/css";
@@ -21,7 +21,7 @@ const TrainingHome = ({
   trainings: ITraining[];
   training: ITraining;
 }) => {
-  const { state, dispatch } = useContext(ApplicationContext);
+  const { dispatch } = useContext(ApplicationContext);
   const [swiper, setSwiper] = useState<any>();
   useEffect(() => {
     dispatch({
@@ -49,7 +49,10 @@ const TrainingHome = ({
             <h4 className="text-heading text-xl mt-4 font-semibold">
               Description
             </h4>
-            <p dangerouslySetInnerHTML={{ __html: training.description }} />
+            <p
+              dangerouslySetInnerHTML={{ __html: training.description }}
+              className="text-justify"
+            />
             <hr className="my-8 border-[#80808044]" />
             <h4 className="text-center sm:text-justify text-heading text-xl mt-4 font-semibold">
               Ce que disent nos étudiants{" "}
@@ -71,7 +74,7 @@ const TrainingHome = ({
                 </p>
               </div>
               <div
-              className="hidden sm:block"
+                className="hidden sm:block"
                 style={{
                   maxWidth: "calc(100% - 220px)",
                 }}

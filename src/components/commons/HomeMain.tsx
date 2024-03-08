@@ -17,7 +17,6 @@ const HomeMain = ({ trainings }: { trainings: ITraining[] }) => {
     <main className="flex flex-col justify-center">
       <Hero />
       <Statistics />
-      {/* <Presentation /> */}
       <WhyCodeWithMe />
       <div className="">
         <div className="container mx-auto">

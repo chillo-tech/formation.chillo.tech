@@ -25,7 +25,6 @@ const TrainingHero = () => {
               {training.title}
             </h3>
             <p className="">{training.subTitle}</p>
-            <p dangerouslySetInnerHTML={{ __html: training.description }} />
             <div className="flex items-center my-4 text-white gap-3 px-3">
               <span className="text-lg">
                 {capitalize(getRateLabel(training.rate))}
@@ -38,7 +37,7 @@ const TrainingHero = () => {
               </span>
             </div>
           </div>
-          <div className="hidden sm:block">
+          <div className="hidden shrink-0 sm:block">
             <Image
               src={training.image?.link || ""}
               height={220}
@@ -50,9 +49,7 @@ const TrainingHero = () => {
         </div>
         {training.isPreview && (
           <div className="my-4 py-3 text-center pl-5 m-4 border-2 border-dashed border-white">
-            <span className=" text-white text-2xl font-bold">
-              PREVIEW
-            </span>
+            <span className=" text-white text-2xl font-bold">PREVIEW</span>
           </div>
         )}
       </div>

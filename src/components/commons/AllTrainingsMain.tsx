@@ -8,7 +8,7 @@ import { FilterTrainings } from "./FilterTrainings";
 import { SearchTrainings } from "./SearchTrainings";
 
 const AllTrainingsMain = ({ trainings }: { trainings: ITraining[] }) => {
-  const { state, dispatch } = useContext(ApplicationContext);
+  const { dispatch } = useContext(ApplicationContext);
   useEffect(() => {
     dispatch({ type: "SET_TRAININGS", payload: trainings });
   }, []);
