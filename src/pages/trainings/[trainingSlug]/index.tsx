@@ -2,6 +2,7 @@ import { HomeLayout } from "@/components";
 import { TrainingHome } from "@/components/Training/TrainingHome";
 import { getTrainings } from "@/services/endpoints/getTrainings";
 import { ITraining } from "@/types";
+import Head from "next/head";
 import React from "react";
 
 const Training = ({
@@ -12,9 +13,14 @@ const Training = ({
   training: ITraining;
 }) => {
   return (
+    <>
+    <Head>
+      <title>{training.title} | Formations Chillo</title>
+    </Head>
     <HomeLayout>
       <TrainingHome training={training} trainings={trainings} />
     </HomeLayout>
+    </>
   );
 };
 
