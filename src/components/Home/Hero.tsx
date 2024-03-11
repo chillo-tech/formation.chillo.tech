@@ -11,7 +11,9 @@ const Hero = () => {
   const typeData = useMemo(
     () =>
       HomeHeaderTextsSlides.map((el) => {
-        const firstValue = `${el.prefix ? el.prefix + " " : ""}${el.value}`;
+        const firstValue = `${
+          el.prefix ? el.prefix + " " : ""
+        }${el.value.toUpperCase()}`;
         return [firstValue, firstValue.length * letterTime];
       }).flat(),
     []
@@ -21,14 +23,14 @@ const Hero = () => {
       <div className="container mx-auto flex gap-9 flex-col md:flex-row md:items-center">
         <div className="max-w-[90%] mx-auto sm:max-w-fit flex flex-col gap-4">
           <h1
-            className={`text-heading !text-[52px] md:!text-[58px] lg:!text-[102px] font-normal my-4 leading-[100%] ${KazimirRegular.className}`}
+            className={`text-heading !text-[52px] md:!text-[58px] lg:!text-[102px] font-normal mb-4 leading-[100%] ${KazimirRegular.className}`}
           >
-            Formez vous{" "}
+            Formez vous <br />
             <TypeAnimation
               sequence={typeData}
               wrapper="span"
               speed={15}
-              className="leading-[100%] md:text-[58px] lg:text-[102px]"
+              className="leading-[100%] md:text-[58px] lg:text-[102px] text-green-300"
               repeat={Infinity}
             />
           </h1>

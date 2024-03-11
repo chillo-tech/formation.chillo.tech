@@ -3,7 +3,7 @@ import { formatMilliseconds } from "@/utils";
 import { animated, useSpring } from "@react-spring/web";
 import classNames from "classnames";
 import { useContext, useEffect, useRef, useState } from "react";
-import { FaChevronDown, FaChevronUp, FaStar } from "react-icons/fa6";
+import { FaChevronDown, FaChevronRight, FaChevronUp, FaStar } from "react-icons/fa6";
 import { AccordionContext, Objective, RowHeader } from "..";
 
 const BigAccordion = ({
@@ -60,8 +60,9 @@ const BigAccordion = ({
   return (
     <animated.section style={style} className={"overflow-hidden"}>
       <header
+
         ref={headerRef}
-        className={`relative flex items-center gap-3 mx-2 border-b ${classNames(
+        className={`relative flex items-center gap-3 mx-2 border-b cursor-pointer ${classNames(
           {
             "pb-4 border-b-gray-300": selected === index,
           }
@@ -69,12 +70,12 @@ const BigAccordion = ({
         onClick={handleToggle}
       >
         <button className={`p-2`}>
-          {selected !== index ? <FaChevronDown /> : <FaChevronUp />}
+          {selected === index ? <FaChevronDown /> : <FaChevronRight />}
         </button>
         <div className="grow-1 w-full gap-3 pr-4 flex justify-between items-center">
           <div>
             <h4
-              className={`text-2xl !font-heading fontF-heading !text-md font-medium  flex items-center justify-between my-4`}
+              className={`text-2xl !font-heading fontF-heading !text-md font-medium  flex items-center justify-between mb-4`}
             >
               <span className="">{chapter.title} </span>
             </h4>

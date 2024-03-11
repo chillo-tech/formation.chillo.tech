@@ -10,12 +10,12 @@ const Objective = ({
   objective: IObjective;
   checkProps?: IconBaseProps;
 }) => {
-  return (
-    <div className="flex gap-3 text-xl">
+  return objective.label ? (
+    <div className="flex gap-3 text-xl items-center">
       <FaCheck className="text-blue-500 shrink-0" size={20} {...checkProps} />
       <p className="text-xl">{objective.label}</p>
     </div>
-  );
+  ) : null;
 };
 
 export { Objective };

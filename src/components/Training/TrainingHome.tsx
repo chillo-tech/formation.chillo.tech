@@ -46,7 +46,7 @@ const TrainingHome = ({
           <main className="max-w-[98vw] lg:max-w-[600px] xl:max-w-[800px] 2xl:max-w-[1000px] lg:pr-[60px] lg:border-r lg:border-r-[#80808044]">
             <TrainingHero />
             <hr className="my-8 border-[#80808044]" />
-            <h4 className="text-heading !font-heading fontF-heading text-xl mt-4">
+            <h4 className="text-heading !font-heading fontF-heading text-2xl mt-4">
               Description
             </h4>
             <p
@@ -54,7 +54,7 @@ const TrainingHome = ({
               className="text-justify"
             />
             <hr className="my-8 border-[#80808044]" />
-            <h4 className="text-center sm:text-justify text-heading !font-heading fontF-heading text-xl mt-4">
+            <h4 className="text-center sm:text-justify text-heading !font-heading fontF-heading text-2xl mt-4">
               Ce que disent nos étudiants{" "}
             </h4>
             <div className="flex flex-col sm:flex-row gap-5 items-center my-5">
