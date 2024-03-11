@@ -4,6 +4,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { TypeAnimation } from "react-type-animation";
 import { CodeView } from "..";
 import { KazimirRegular } from "@/fonts";
+import Link from "next/link";
 
 const Hero = () => {
   const letterTime = 200;
@@ -22,7 +23,7 @@ const Hero = () => {
           <h1
             className={`text-heading !text-[52px] md:!text-[58px] lg:!text-[102px] font-normal my-4 leading-[100%] ${KazimirRegular.className}`}
           >
-            Formez vous {" "}
+            Formez vous{" "}
             <TypeAnimation
               sequence={typeData}
               wrapper="span"
@@ -35,13 +36,15 @@ const Hero = () => {
             Trouvez <span className="font-bold">un boulot</span> et devenez{" "}
             <span className="font-bold">financierement independant!</span>
           </p>
-          <button
-            style={{ color: "white" }}
-            className=" justify-center md:justify-start w-full md:w-fit rounded-[35px] font-xl font-bold  py-5 px-8  items-center bg-green-300 text-white flex gap-3 hover:gap-6 transition-all"
-          >
-            <span className="!text-white-100">Voir tous les cours</span>
-            <FaArrowRight color="white" />
-          </button>
+          <Link href="/trainings">
+            <button
+              style={{ color: "white" }}
+              className=" justify-center md:justify-start w-full md:w-fit rounded-[35px] font-xl font-bold  py-5 px-8  items-center bg-green-300 text-white flex gap-3 hover:gap-6 transition-all"
+            >
+              <span className="!text-white-100">Voir tous les cours</span>
+              <FaArrowRight color="white" />
+            </button>
+          </Link>
         </div>
         <CodeView />
       </div>
