@@ -18,7 +18,7 @@ const ListCard = () => {
   }, [training]);
   return (
     training && (
-      <div className="grid grid-cols-2 gap-3 grid-rows-4 pt-2 text-heading">
+      <div className="grid grid-cols-2 gap-3 grid-rows-4 pt-2 text-heading !font-heading ">
         {training.levels &&
           Array.isArray(training.levels) &&
           training.levels.length > 0 &&

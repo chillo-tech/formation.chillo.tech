@@ -62,7 +62,7 @@ const Hero = () => {
         <div className="training-top-section" ref={topContainerRef}>
           <div className="flex gap-5 items-center">
             <div className="w-1/2 shrink-0">
-              <h1 className="text-heading">{training?.title}</h1>
+              <h1 className="text-heading !font-heading fontF-heading">{training?.title}</h1>
               <p className="text-lg">{training?.subTitle}</p>
               <div className="flex flex-wrap gap-4 items-center my-4">
                 <div className="flex items-center gap-2">
@@ -135,7 +135,7 @@ const Hero = () => {
               })}
             </div>
             <section id={heroSections[0].id} className="pb-4 my-2">
-              <header className="text-heading text-lg font-semibold border-b-2 border-b-blue-500 pt-2 mt-4">
+              <header className="text-heading !font-heading fontF-heading text-lg font-semibold border-b-2 border-b-blue-500 pt-2 mt-4">
                 Ce que vous apprendrez
               </header>
               <div className="pl-6 ">
@@ -149,13 +149,13 @@ const Hero = () => {
                     );
                   })}
                 </div>
-                <footer className="pt-4 text-heading">
+                <footer className="pt-4 text-heading !font-heading fontF-heading">
                   {training?.description}
                 </footer>
               </div>
             </section>
             <section id={heroSections[1].id}>
-              <header className="text-heading text-lg font-semibold border-b-2 border-b-blue-500 pt-2 mt-4">
+              <header className="text-heading !font-heading fontF-heading text-lg font-semibold border-b-2 border-b-blue-500 pt-2 mt-4">
                 Ce que vous devriez savoir
               </header>
               <div className="space-y-2 pl-6">
@@ -170,7 +170,7 @@ const Hero = () => {
               </div>
             </section>
             <section id={heroSections[2].id}>
-              <header className="text-heading text-lg font-semibold border-b-2 border-b-blue-500 pt-2 mt-4">
+              <header className="text-heading !font-heading fontF-heading text-lg font-semibold border-b-2 border-b-blue-500 pt-2 mt-4">
                 Pour qui est fait ce cours?
               </header>
               <div className="pl-6 mt-4 grid gap-4">

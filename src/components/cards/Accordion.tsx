@@ -2,9 +2,9 @@ import { IChapter } from "@/types";
 import { formatMilliseconds } from "@/utils";
 import { animated, useSpring } from "@react-spring/web";
 import classNames from "classnames";
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { FaChevronDown, FaChevronUp, FaStar } from "react-icons/fa6";
-import { AccordionContext, RowHeader, Objective } from "..";
+import { AccordionContext, Objective, RowHeader } from "..";
 
 const BigAccordion = ({
   chapter,
@@ -16,12 +16,11 @@ const BigAccordion = ({
   const headerRef = useRef<HTMLElement>(null);
   const bodyRef = useRef<HTMLDivElement>(null);
   const { selected, setSelected } = useContext(AccordionContext);
-  console.log("client height", headerRef.current?.clientHeight);
   const [style, api] = useSpring(() => ({
-    from: { height: headerRef.current?.clientHeight || 77 },
+    from: { height: headerRef.current?.clientHeight || 100 },
     to: {
       height:
-        (headerRef.current?.clientHeight || 77) +
+        (headerRef.current?.clientHeight || 100) +
         (bodyRef.current?.clientHeight || 0),
     },
   }));
@@ -34,19 +33,29 @@ const BigAccordion = ({
   };
 
   useEffect(() => {
-    console.log("change", index, selected);
     if (selected === index) {
       api.start({
         height:
-          (headerRef.current?.clientHeight || 77) +
+          (headerRef.current?.clientHeight || 100) +
           (bodyRef.current?.clientHeight || 200),
       });
     } else if (selected !== -2) {
       api.start({
-        height: headerRef.current?.clientHeight || 77,
+        height: headerRef.current?.clientHeight || 100,
       });
     }
   }, [selected === index]);
+
+  const [isHeightSetted, setIsHeightSetted] = useState(false);
+  useEffect(() => {
+    if (isHeightSetted) return;
+    if (headerRef.current) {
+      setIsHeightSetted(true);
+      api.set({
+        height: headerRef.current?.clientHeight,
+      });
+    }
+  }, [headerRef.current]);
 
   return (
     <animated.section style={style} className={"overflow-hidden"}>
@@ -62,9 +71,11 @@ const BigAccordion = ({
         <button className={`p-2`}>
           {selected !== index ? <FaChevronDown /> : <FaChevronUp />}
         </button>
-        <div className="grow-1 w-full pr-4 flex justify-between items-center">
+        <div className="grow-1 w-full gap-3 pr-4 flex justify-between items-center">
           <div>
-            <h4 className="text-heading text-md font-medium  flex items-center justify-between my-4">
+            <h4
+              className={`text-2xl !font-heading fontF-heading !text-md font-medium  flex items-center justify-between my-4`}
+            >
               <span className="border-b border-b-heading">
                 {chapter.title}{" "}
               </span>
@@ -75,7 +86,7 @@ const BigAccordion = ({
                 <>
                   <span className="h-1 w-1 bg-text rounded-[50%] shrink-0" />
                   <p className="flex items-center gap-1">
-                    <span className="text-heading font-bold">
+                    <span className="text-[18px] !font-heading font-bold">
                       {chapter.rate}
                     </span>
                     <FaStar size={18} className="shrink-0 text-blue-500" />
@@ -94,7 +105,9 @@ const BigAccordion = ({
       </header>
       {/* {selected === index && ( */}
       <div ref={bodyRef} className="text-sm space-y-3 px-6 py-4">
-        <p className="text-heading">Ce que vous apprendrez</p>
+        <p className="text-2xl !font-heading fontF-heading">
+          Ce que vous apprendrez
+        </p>
         {chapter.objectives && (
           <div>
             {chapter.objectives.map((objective, index) => {
@@ -118,15 +131,15 @@ const BigAccordion = ({
         <div>{chapter.description && <p>{chapter.description}</p>}</div>
         {chapter.skills && chapter.skills.length > 0 && (
           <footer>
-            <p className="text-heading text-lg">
+            <p className="text-heading !font-heading fontF-heading text-lg">
               Les compétences que vous gagnerez
             </p>
-            <div className="flex gap-2 my-3 items-center">
+            <div className="flex gap-2 my-3 items-center flex-wrap">
               {chapter.skills?.slice(0, 6).map((topic, index) => {
                 return (
                   <div
                     key={index}
-                    className="h-fit w-fit rounded-lg text-sm bg-[#1f1f1f59] text-white p-1 px-2"
+                    className="h-fit w-fit rounded-lg text-lg bg-[#1f1f1f59] text-white p-1 px-2"
                   >
                     {topic.skills_id.label}
                   </div>

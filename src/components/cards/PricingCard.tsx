@@ -58,7 +58,7 @@ const PricingCard = ({
           >
             {pricing.suscribeMessage || "Abonnez-vous et Economisez"}
           </Link>
-          <p className="my-2 text-sm font-semibold text-heading opacity-45">
+          <p className="my-2 text-sm font-semibold text-heading !font-heading fontF-heading opacity-45">
             {pricing.subscribeLabel || "Annulez à tout moment !"}
           </p>
         </div>

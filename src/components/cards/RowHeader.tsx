@@ -14,9 +14,11 @@ const RowHeader = ({ data }: { data: ILesson }) => {
             <FaSheetPlastic />
           )}
         </span>
-        <span className="text-md text-heading">{data.title}</span>
+        <span className="text-xl !font-heading">{data.title}</span>
       </div>
-      <span >{formatMilliseconds(data.time)[3] || "30min"}</span>
+      <span className="text-xl shrink-0">
+        {formatMilliseconds(data.time)[3] || "30min"}
+      </span>
     </div>
   );
 };

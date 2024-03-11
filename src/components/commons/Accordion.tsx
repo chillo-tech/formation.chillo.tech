@@ -46,16 +46,13 @@ const Accordion = () => {
             return (
               <div
                 key={`chapter-${index}`}
-                className={`my-4 bg-[#97979738] rounded-xl py-1 sm:py-4 px-1  my ${classNames(
+                className={`my-4 bg-[#5a68790f] rounded-xl py-1 sm:py-4 px-1  my ${classNames(
                   {
                     "": index !== training.chapters.length - 1,
                   }
                 )}`}
               >
-                <BigAccordion
-                  index={index + 1}
-                  chapter={chapter.Chapter_id}
-                />
+                <BigAccordion index={index + 1} chapter={chapter.Chapter_id} />
               </div>
             );
           })}

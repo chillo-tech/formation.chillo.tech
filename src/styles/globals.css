@@ -2,21 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Kwasimir";
+  src: url("/fonts/Kazimir-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "HurgeGeometric";
+  src: url("/fonts/HurmeGeometricSans3-Regular.woff2") format("woff2");
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  color: #43406d;
-  background-color: #0d1224;
+  font-family: HurgeGeometric, sans-serif;
   color: #d3d8e8;
-  padding: 0 8px;
   background-color: #f7f7f8;
-  border: 1rem solid rgb(37 99 235);
+  border: 24px solid #1e133e;
   color: #3b4b5f;
   background-image: url("/images/bg-grid-lighter.svg");
   background-position: center -10px;
   background-repeat: no-repeat;
+  font-size: 19px;
+  overflow-x: hidden;
+}
+
+.fontF-heading {
+  font-family: Kwasimir, sans-serif;
+}
+
+.container {
+  padding: 0 8px;
 }
 
 h1 {

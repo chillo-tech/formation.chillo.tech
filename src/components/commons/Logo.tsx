@@ -9,7 +9,7 @@ const Logo = ({ size = "small" }: { size?: keyof typeof LogoSizes }) => {
       <Link href="/">
         <Image
           loading="lazy"
-          src="/images/logo.png"
+          src="/images/chillo-services.webp"
           alt="formation-chillo.tech"
           {...LogoSizes[size]}
         />

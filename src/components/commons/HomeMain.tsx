@@ -29,7 +29,7 @@ const HomeMain = ({ trainings }: { trainings: ITraining[] }) => {
           <CoursesView trainings={state.trainings} />
         </div>
       </div>
-      <LearningPaths />
+      {/* <LearningPaths /> */}
       <Testimonials />
       <Pricings />
     </main>

@@ -15,13 +15,13 @@ const TrainingHero = () => {
       <div className="my-5 rounded-3xl overflow-hidden bg-gradient-to-r from-blue-500 to-[#af67f6] text-[#ffffffc2]">
         <div className="flex items-center justify-between gap-6 p-5 pb-2">
           <div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 flex-wrap">
               {training.skills?.slice(0, 6).map((topic, index) => {
                 console.log("topic", topic);
                 return <LabelCard key={index} label={topic.skills_id?.label} />;
               })}
             </div>
-            <h3 className="text-white text-3xl font-semibold mt-5 mb-3">
+            <h3 className="text-white text-4xl fontF-heading mt-5 mb-3">
               {training.title}
             </h3>
             <p className="">{training.subTitle}</p>
@@ -48,8 +48,8 @@ const TrainingHero = () => {
           </div>
         </div>
         {training.isPreview && (
-          <div className="my-4 py-3 text-center pl-5 m-4 border-2 border-dashed border-white">
-            <span className=" text-white text-2xl font-bold">PREVIEW</span>
+          <div className="py-3 pl-5 bg-white text-blue-500 text-center">
+            <span className="text-2xl font-bold">PREVIEW</span>
           </div>
         )}
       </div>

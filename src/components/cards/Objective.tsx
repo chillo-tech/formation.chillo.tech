@@ -11,9 +11,9 @@ const Objective = ({
   checkProps?: IconBaseProps;
 }) => {
   return (
-    <div className="flex gap-3">
+    <div className="flex gap-3 text-xl">
       <FaCheck className="text-blue-500 shrink-0" size={20} {...checkProps} />
-      <p>{objective.label}</p>
+      <p className="text-xl">{objective.label}</p>
     </div>
   );
 };
