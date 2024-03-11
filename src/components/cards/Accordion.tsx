@@ -76,9 +76,7 @@ const BigAccordion = ({
             <h4
               className={`text-2xl !font-heading fontF-heading !text-md font-medium  flex items-center justify-between my-4`}
             >
-              <span className="border-b border-b-heading">
-                {chapter.title}{" "}
-              </span>
+              <span className="">{chapter.title} </span>
             </h4>
             <div className="items-center flex gap-3 text-sm">
               <span>{formatMilliseconds(chapter.time)[0]}</span>
@@ -128,11 +126,15 @@ const BigAccordion = ({
             return <RowHeader key={`lesson-${index}`} data={lesson} />;
           })}
         </div>
-        <div>{chapter.description && <p>{chapter.description}</p>}</div>
+        <div className="text-[19px] ">
+          {chapter.description && (
+            <p className="leading-7 text-justify">{chapter.description}</p>
+          )}
+        </div>
         {chapter.skills && chapter.skills.length > 0 && (
           <footer>
-            <p className="text-heading !font-heading fontF-heading text-lg">
-              Les compétences que vous gagnerez
+            <p className="!font-heading fontF-heading text-2xl">
+              Compétences acquises
             </p>
             <div className="flex gap-2 my-3 items-center flex-wrap">
               {chapter.skills?.slice(0, 6).map((topic, index) => {
