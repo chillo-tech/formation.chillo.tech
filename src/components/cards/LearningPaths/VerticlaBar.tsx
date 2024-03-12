@@ -1,4 +1,4 @@
-const VerticlaBar = ({
+const VerticalBar = ({
   count,
   parentHeght,
   childrenSizes,
@@ -29,7 +29,7 @@ const VerticlaBar = ({
   };
   return (
     childrenSizes &&
-    childrenSizes.length > 0 && (
+    childrenSizes.length > 0 ? (
       <div
         className="relative w-1 bg-gray-300"
         style={{
@@ -42,8 +42,8 @@ const VerticlaBar = ({
       >
         {genDots()}
       </div>
-    )
-  );
+    ): <div>NO</div>
+  ) ;
 };
 
-export { VerticlaBar };
+export { VerticalBar };

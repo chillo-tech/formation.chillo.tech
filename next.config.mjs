@@ -10,6 +10,12 @@ const nextConfig = {
         port: "",
         pathname: "/assets/**",
       },
+      {
+        protocol: "https",
+        hostname: "www.canva.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };

@@ -1,6 +1,6 @@
 import React from "react";
 
-const CursusHeader = ({
+const SmallHeader = ({
   label,
   title,
   subTitle,
@@ -13,11 +13,11 @@ const CursusHeader = ({
     <div className="md:min-w-[150px] md:max-w-[200px]">
       {label && <label className="text-blue-500 text-md">{label}</label>}
       {title && (
-        <h4 className="py-3 text-heading text-2xl text-bold">{title}</h4>
+        <h4 className="py-3 text-heading !font-heading fontF-heading text-2xl text-bold">{title}</h4>
       )}
       {subTitle && <p className="text-gray-400 text-sm">{subTitle}</p>}
     </div>
   );
 };
 
-export { CursusHeader };
+export { SmallHeader };

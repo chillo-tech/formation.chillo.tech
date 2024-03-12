@@ -1,14 +1,13 @@
 import { testimonialCards } from "@/data";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { TestimonialCard } from "./Card";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { DetailsCard } from "./DetailsCard";
 
-const TestimonialCarousel = () => {
+const BigCarousel = () => {
   return (
     <div className="max-w-[98vw] overflow-hidden">
       <div className="w-[87%] overflow-x-hidden h-full mx-auto relative">
@@ -44,7 +43,7 @@ const TestimonialCarousel = () => {
           {testimonialCards.map((card, index) => {
             return (
               <SwiperSlide key={`testimonial-card-${index}`}>
-                <TestimonialCard {...card} />
+                <DetailsCard {...card} />
               </SwiperSlide>
             );
           })}
@@ -58,4 +57,4 @@ const TestimonialCarousel = () => {
   );
 };
 
-export { TestimonialCarousel };
+export { BigCarousel };

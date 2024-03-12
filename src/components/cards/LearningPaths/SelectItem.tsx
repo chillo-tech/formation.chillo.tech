@@ -35,7 +35,7 @@ const SelectItem = ({
         )}
         <div className="px-4 py-4" onMouseEnter={handleShow}>
           <div className="flex items-center gap-2 border-2 px-3 rounded-[20px] border-blue-500">
-            <h4 className="text-heading text-md text-nowrap">
+            <h4 className="text-heading !font-heading fontF-heading text-md text-nowrap">
               {childs.length}{" "}
               {capitalize(
                 childs.length > 1

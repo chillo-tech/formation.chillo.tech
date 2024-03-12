@@ -1,7 +1,7 @@
 import { YellowRate } from "@/components";
 import Image from "next/image";
 
-const TestimonialCard = ({
+const DetailsCard = ({
   message,
   name,
   photoUrl,
@@ -39,4 +39,4 @@ const TestimonialCard = ({
   );
 };
 
-export { TestimonialCard };
+export { DetailsCard };

@@ -20,7 +20,7 @@ const useNavbar = () => {
 
   useEffect(() => {
     const handler = () => {
-      if (window.scrollY >= 50) {
+      if (window.scrollY >= 20) {
         setFixed(true);
       } else {
         setFixed(false);

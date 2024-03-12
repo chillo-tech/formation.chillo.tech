@@ -4,6 +4,7 @@ import { THomeView } from "..";
 
 type TState = {
   trainings: ITraining[];
+  actualTraining?: ITraining;
 };
 
 type TAction =
@@ -14,6 +15,10 @@ type TAction =
   | {
       type: typeof reducerTypeNames.SET_HOME_VIEW;
       payload: THomeView;
+    }
+  | {
+      type: typeof reducerTypeNames.SET_ACTUAL_TRAINING;
+      payload: ITraining;
     };
 
 type TReducer = (state: TState, action: TAction) => TState;

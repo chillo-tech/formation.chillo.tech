@@ -12,6 +12,11 @@ const reducer: TReducer = (state, action) => {
         ...state,
         trainings: action.payload,
       };
+    case reducerTypeNames.SET_ACTUAL_TRAINING:
+      return {
+        ...state,
+        actualTraining: action.payload,
+      };
     default:
       return state;
   }
