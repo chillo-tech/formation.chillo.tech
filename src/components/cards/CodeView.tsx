@@ -17,22 +17,22 @@ const CodeView = () => {
           <code className="font-mono">
             <div className="blink">
               <span className="text-pink-500 mr-2">const</span>
-              <span className="text-white mr-2">coder</span>
+              <span className="text-white mr-2">devops</span>
               <span className="text-pink-500 mr-2">=</span>
               <span className="text-gray-400">{"{"}</span>
             </div>
             <div>
               <span className="text-white ml-8 mr-2">name:</span>
               <span className="text-gray-400">'</span>
-              <span className="text-amber-300">Master Coder</span>
+              <span className="text-amber-300">Become DEVOPS</span>
               <span className="text-gray-400">',</span>
             </div>
             <div>
               <span className="text-white ml-8 mr-2">skills:</span>
               <span className="text-gray-400">['</span>
-              <span className="text-amber-300">React</span>
+              <span className="text-amber-300">build</span>
               <span className="text-gray-400">', '</span>
-              <span className="text-amber-300">Node</span>
+              <span className="text-amber-300">deploy</span>
               <span className="text-gray-400">'],</span>
             </div>
             <div>

@@ -86,7 +86,7 @@ const Navbar = () => {
         </button>
         <animated.div
           style={style}
-          className="grid text-[16px] space-y-[28px] sm:text-[32px] text-heading !font-heading fontF-heading md:text-[42px] overflow-hidden lg:hidden fixed left-[0] top-[0] w-full h-[100vh] border-[24px] p-12 border-[#1e133e] bg-white z-50"
+          className="grid text-[16px] space-y-[28px] sm:text-[32px] text-heading items-center !font-heading fontF-heading md:text-[42px] overflow-hidden lg:hidden fixed left-[0] top-[0] w-full h-[100vh] border-[24px] p-12 border-[#1e133e] bg-white z-50"
         >
           <button
             className="justify-self-end block float-right"
@@ -98,14 +98,14 @@ const Navbar = () => {
             <Link
               key={`nav-link-${link.path}-${index}`}
               href={link.path}
-              className={`block hover:text-blue-500 h-fit ${KazimirRegular.className} capitalize font-normal`}
+              className={`block text-center hover:text-blue-500 h-fit ${KazimirRegular.className} capitalize font-normal`}
             >
               {link.label}
             </Link>
           ))}
           <button
             style={{ color: "white" }}
-            className="rounded-[35px] text-[16px] bg-green-300 py-5 px-6 w-fit h-fit"
+            className="rounded-[35px] self-center mx-auto w-full text-[16px] bg-green-300 py-5 px-6 w-fit h-fit"
           >
             Tous les cours
           </button>

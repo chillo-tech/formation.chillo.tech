@@ -1,4 +1,4 @@
-const mainStats = [
+const mainStats = ({ trainingCount }: { trainingCount: number }) => [
   {
     value: "10M+",
     label: "Les étudiants ont enseigné",
@@ -15,8 +15,8 @@ const mainStats = [
     style: "rose",
   },
   {
-    value: "51",
-    label: "Cours de codage",
+    value: `${trainingCount}`,
+    label: "Cours",
     style: "orange",
   },
 ];
