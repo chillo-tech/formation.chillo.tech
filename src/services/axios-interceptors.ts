@@ -11,9 +11,9 @@ const onRequest = async (
 ): Promise<AxiosRequestConfig> => {
   const { headers = {} } = config;
   let authorization: any = { Authorization: headers['Authorization'] };
-
   const { url = '' } = config;
-  const baseURL = url.includes('/api/backoffice')
+  const isToBackoffice = url.includes('/api/backoffice')
+  const baseURL = isToBackoffice
     ? process.env.BACKOFFICE_API
     : url.includes('/api/node')
     ? process.env.NODE_API
@@ -23,7 +23,7 @@ const onRequest = async (
     .replaceAll('/api/node', '/api/v1');
   authorization = {
     Authorization: `Bearer ${
-      url.includes('/api/backoffice')
+      isToBackoffice
         ? process.env.BACKOFFICE_API_TOKEN
         : process.env.NODE_API_TOKEN
     }`,

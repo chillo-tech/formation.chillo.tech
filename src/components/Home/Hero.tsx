@@ -6,7 +6,7 @@ import { CodeView } from "..";
 import { KazimirRegular } from "@/fonts";
 import Link from "next/link";
 
-const Hero = () => {
+const HomeHero = () => {
   const letterTime = 200;
   const typeData = useMemo(
     () =>
@@ -54,4 +54,4 @@ const Hero = () => {
   );
 };
 
-export { Hero };
+export { HomeHero };

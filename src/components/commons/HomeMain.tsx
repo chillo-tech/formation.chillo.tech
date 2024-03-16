@@ -3,7 +3,7 @@ import { ITraining } from "@/types";
 import {
   CoursesView,
   Heading,
-  Hero,
+  HomeHero,
   LearningPaths,
   Pricings,
   Statistics,
@@ -15,7 +15,7 @@ const HomeMain = ({ trainings }: { trainings: ITraining[] }) => {
   const { state } = useHome({ trainings });
   return (
     <main className="flex flex-col justify-center">
-      <Hero />
+      <HomeHero />
       <Statistics />
       <WhyCodeWithMe />
       <div className="">

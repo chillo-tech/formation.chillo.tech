@@ -119,7 +119,7 @@ const ContactForm = () => {
         </Button>
         <Separator className="my-6 bg-light-gray" />
         <FormDescription className="text-black/70">
-          Merci de considérer nos services pour concrétiser votre vision. |
+          Merci de considérer nos services pour concrétiser votre vision. 
           <span className="font-semibold text-blue">{siteConfig.appName}</span>.
         </FormDescription>
       </form>

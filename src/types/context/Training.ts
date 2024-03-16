@@ -48,6 +48,49 @@ interface ITraining {
   prerequisites: {
     prerequisite_id: IPrerequisite;
   }[];
+  sessions: ISession[];
+}
+
+export interface ISession {
+  user_updated: string;
+  user_created: string;
+  date_created: string;
+  date_updated: string;
+  date_heure: string;
+  form_view_title: string;
+  slug: string;
+  type_formation: string;
+  status: string;
+  form_view_description: string;
+  horaire_formation: string;
+  duree: string;
+  titre: string;
+  training: number;
+  formation: any;
+  formateur: number;
+  sort: any;
+  id: number;
+  active: boolean;
+  candidats: any[];
+  avis: any[];
+  prix: {
+    ConceptPrix_id: IPrix;
+  }[];
+  attentes: any[];
+}
+
+interface IPrix {
+  user_updated: string;
+  user_created: string;
+  date_updated: string;
+  date_created: string;
+  libelle: string;
+  status: string;
+  concept_prix: any;
+  description: string;
+  session_id: number;
+  sort: any;
+  id: number;
 }
 
 export interface IVideo {

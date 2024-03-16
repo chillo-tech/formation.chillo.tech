@@ -1,10 +1,11 @@
 import { reducerTypeNames } from "@/data/context";
-import { ITraining } from ".";
+import { ISession, ITraining } from ".";
 import { THomeView } from "..";
 
 type TState = {
   trainings: ITraining[];
   actualTraining?: ITraining;
+  actualSession?: ISession;
 };
 
 type TAction =
@@ -19,8 +20,11 @@ type TAction =
   | {
       type: typeof reducerTypeNames.SET_ACTUAL_TRAINING;
       payload: ITraining;
+    }
+  | {
+      type: typeof reducerTypeNames.SET_ACTUAL_SESSION;
+      payload: ISession;
     };
-
 type TReducer = (state: TState, action: TAction) => TState;
 
 export type { TAction, TReducer, TState };

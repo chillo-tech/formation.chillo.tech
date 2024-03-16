@@ -1,4 +1,3 @@
-import { title1, title2 } from "@/assets/fonts";
 import { HomeLayout } from "@/components";
 import ContactForm from "@/components/commons/ContactForm";
 import { cn } from "@/lib/utils";
