@@ -14,6 +14,9 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "hero-pattern": "url('/images/bg-grid-lighter.svg')",
       },
+      fontSize: {
+        heading: "34px",
+      },
       colors: {
         blue: {
           500: "rgb(37 99 235)",

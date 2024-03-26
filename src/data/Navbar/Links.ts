@@ -1,23 +1,16 @@
 const NavbarLinks = [
   {
+    label: "Cours",
+    path: "trainings",
+  },
+  {
     label: "S'abonner",
     path: "subscribe",
   },
-  {
-    label: "Cours",
-    path: "courses",
-  },
-  {
-    label: "Parcours d'apprentissage",
-    path: "learning-paths",
-  },
-  {
-    label: "Forum",
-    path: "forum",
-  },
+
   {
     label: "Contact",
-    path: "contact",
+    path: "contact-us",
   },
 ];
 

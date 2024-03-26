@@ -16,18 +16,26 @@ interface ITraining {
   lifetimeAcces: boolean;
   learnAtYourOwnPace: boolean;
   subTitle: string;
+  price: IPrice;
   description: any;
-  promotionVideo: string;
-  image: number;
+  promotionVideo: IVideo;
+  textColor?: string;
+  image: IImage;
   onSale: boolean;
   status: string;
+  isPreview: boolean;
+  skills: {
+    skills_id: ISkill;
+  }[];
   chapters: {
     Chapter_id: IChapter;
   }[];
   levels: {
     Training_Levels_id: ILevel;
   }[];
-  videos: any[];
+  videos: {
+    video_id: IVideo;
+  }[];
   metadatas: any[];
   objectives: {
     objective_id: IObjective;
@@ -40,6 +48,91 @@ interface ITraining {
   prerequisites: {
     prerequisite_id: IPrerequisite;
   }[];
+  sessions: ISession[];
+}
+
+export interface ISession {
+  user_updated: string;
+  user_created: string;
+  date_created: string;
+  date_updated: string;
+  date_heure: string;
+  form_view_title: string;
+  slug: string;
+  type_formation: string;
+  status: string;
+  form_view_description: string;
+  horaire_formation: string;
+  duree: string;
+  titre: string;
+  training: number;
+  formation: any;
+  formateur: number;
+  sort: any;
+  id: number;
+  active: boolean;
+  candidats: any[];
+  avis: any[];
+  prix: {
+    ConceptPrix_id: IPrix;
+  }[];
+  attentes: any[];
+}
+
+interface IPrix {
+  user_updated: string;
+  user_created: string;
+  date_updated: string;
+  date_created: string;
+  libelle: string;
+  status: string;
+  concept_prix: any;
+  description: string;
+  session_id: number;
+  sort: any;
+  id: number;
+}
+
+export interface IVideo {
+  user_updated: string;
+  user_created: string;
+  id: string;
+  date_updated: string;
+  date_created: string;
+  link: string;
+  title: string;
+  description: string;
+  formation_id: any;
+  thumbnail: {
+    image_id: IImage;
+  }[];
+  trainings: number[];
+}
+
+export interface IImage {
+  user_updated: string;
+  user_created: string;
+  date_updated: string;
+  date_created: string;
+  backgroundColor: any;
+  name: string;
+  description: string;
+  link: string;
+  status: string;
+  id: number;
+  videos: number[];
+}
+
+interface IPrice {
+  id: number;
+  user_created: string;
+  date_created: string;
+  user_updated: any;
+  date_updated: any;
+  value: number;
+  currency: string;
+  description: string;
+  trainings: number[];
 }
 
 interface IChapter {
@@ -55,6 +148,14 @@ interface IChapter {
   status: any;
   trainings: number[];
   Lessons: ILesson[];
+  skills: {
+    skills_id: ISkill;
+  }[];
+  rate?: number;
+  ratings?: number;
+  objectives?: {
+    objective_id: IObjective;
+  }[];
 }
 
 interface ILesson {
@@ -84,6 +185,15 @@ interface ILevel {
   title: string;
   description: string;
   trainings: number[];
+}
+
+interface ISkill {
+  id: number;
+  user_created: string;
+  date_created: string;
+  user_updated: string;
+  date_updated: string;
+  label: string;
 }
 
 interface IObjective {

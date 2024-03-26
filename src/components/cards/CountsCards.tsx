@@ -11,7 +11,7 @@ const CountsCards = ({
   style: string;
 }) => {
   return (
-    <div className="shadow-2xl shadow-gray-50 border border-violet-50 bg-white rounded-md relative">
+    <div className="shadow-2xl shadow-gray-50 border border-violet-50 rounded-md relative bg-[#f7f7f8]">
       <div className="flex justify-center -translate-y-[1px]">
         <div className="w-3/4">
           <div
