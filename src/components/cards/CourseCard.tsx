@@ -28,7 +28,7 @@ const CourseCard = ({
 }) => {
   const link = `/trainings/${slug}`;
   return (
-    <div className=" border border-transparent rounded-md bg-white shadow-md hover:border-blue-500 transition-all">
+    <div className=" border border-transparent rounded-md w-full bg-white shadow-md hover:border-blue-500 transition-all">
       <div className="overflow-hidden grid">
         <Link
           href={link}
@@ -70,7 +70,7 @@ const CourseCard = ({
       </div>
 
       <div className="rounded-b-md p-5">
-        <p className="flex items-center justify-between">
+        <p className="flex items-start justify-between">
           <Link href={link}>
             <span className="text-heading !font-heading text-xl font-bold transition-all cursor-pointer hover:text-blue-500">
               {title}

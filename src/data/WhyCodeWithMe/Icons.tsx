@@ -10,7 +10,7 @@ import {
 
 class IconService {
   icons = {
-    clock: FaBell,
+    bell: FaBell,
     videos: FaVideo,
     settings: FaWheelchair,
     world: FaEarthAmericas,
@@ -23,6 +23,7 @@ class IconService {
       size: 27,
       ...propsToAdd,
     };
+    if(!this.icons[name]) return null
     return this.icons[name](props);
   };
 }

@@ -1,17 +1,25 @@
-const mainStats = ({ trainingCount }: { trainingCount: number }) => [
+import { mesurize } from "@/utils";
+
+const mainStats = ({
+  trainingCount,
+  statistics,
+}: {
+  trainingCount: number;
+  statistics: any;
+}) => [
   {
-    value: "10M+",
-    label: "Les étudiants ont enseigné",
+    value: mesurize(statistics.students.count),
+    label: statistics.students.label,
     style: "blue",
   },
   {
-    value: "3M+",
-    label: "Fans Youtube",
+    value: mesurize(statistics.fans.count),
+    label: statistics.fans.label,
     style: "green",
   },
   {
-    value: "20+",
-    label: "Années d'expérience",
+    value: mesurize(statistics.years.count),
+    label: statistics.years.label,
     style: "rose",
   },
   {

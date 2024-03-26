@@ -11,13 +11,22 @@ import {
   WhyCodeWithMe,
 } from "..";
 
-const HomeMain = ({ trainings }: { trainings: ITraining[] }) => {
+const HomeMain = ({
+  trainings,
+  articles,
+  statistics,
+}: {
+  trainings: ITraining[];
+  statistics: any;
+  articles: any;
+}) => {
+  console.log("articles home main", articles);
   const { state } = useHome({ trainings });
   return (
     <main className="flex flex-col justify-center">
       <HomeHero />
-      <Statistics />
-      <WhyCodeWithMe />
+      <Statistics statistics={statistics} />
+      <WhyCodeWithMe article={articles.articleNosValeurs} />
       <div className="">
         <div className="container mx-auto">
           <Heading
@@ -31,7 +40,11 @@ const HomeMain = ({ trainings }: { trainings: ITraining[] }) => {
       </div>
       {/* <LearningPaths /> */}
       <Testimonials />
-      <Pricings />
+      <Pricings
+        allAccessTraining={trainings.find(
+          (training) => training.type === "3"
+        )}
+      />
     </main>
   );
 };

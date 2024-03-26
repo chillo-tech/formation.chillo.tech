@@ -20,7 +20,8 @@ const LabelIconCard = ({ section }: { section: ISection }) => {
             {section.label}
           </span>
         </div>
-        <h2 className="text-3xl fontF-heading">{section.title}</h2>
+        {/* @ts-ignore */}
+        <h2 className="text-3xl fontF-heading">{section.title.value}</h2>
         <p>{section.description}</p>
       </div>
       <div className="flex justify-center md:w-1/2 justify-self-center md:items-start items-center">

@@ -1,3 +1,6 @@
+import { ITraining } from "@/types";
+import { genOptions } from "@/utils";
+
 const options = [
   "51 cours complets",
   "340 heures de vidéo HD",
@@ -9,10 +12,10 @@ const options = [
   "Apprenez à votre propre rythme",
 ];
 
-const pricingByMonth = {
+const pricingByMonth = (training: ITraining) => ({
   label: "TOUS LES COURS",
-  price: "29€/mois",
-  options: options,
-};
+  price: `${training.price.value}${training.price.currency}/mois`,
+  options: genOptions(training),
+});
 
 export { options, pricingByMonth };
