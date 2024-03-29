@@ -51,6 +51,50 @@ interface ITraining {
   sessions: ISession[];
 }
 
+export interface ISondage {
+  id: number;
+  sort: any;
+  session: number;
+  description: string;
+  titre: string;
+  status: string;
+  date_fin: string;
+  date_debut: string;
+  date_updated: string;
+  timestamp: string;
+  date_created: string;
+  image: IImage;
+  user_updated: string;
+  user_created: string;
+  questions: Question[];
+}
+
+export interface Question {
+  id: number;
+  sort: any;
+  sondage: number;
+  question: string;
+  type?: string;
+  status: string;
+  date_updated?: string;
+  date_created: string;
+  user_updated?: string;
+  user_created: string;
+  choix: Choix[];
+}
+
+export interface Choix {
+  id: number;
+  sort: any;
+  question: number;
+  option: string;
+  status: string;
+  date_updated: string;
+  date_created: string;
+  user_updated: string;
+  user_created: string;
+}
+
 export interface ISession {
   user_updated: string;
   user_created: string;
@@ -77,6 +121,7 @@ export interface ISession {
     ConceptPrix_id: IPrix;
   }[];
   attentes: any[];
+  sondages: ISondage[];
 }
 
 interface IPrix {

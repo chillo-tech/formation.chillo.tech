@@ -1,9 +1,30 @@
-import { ITraining } from "@/types";
+import { ISondage, ITraining } from "@/types";
 import { axiosInstance } from "..";
 
 type TPropsSlugDefinition = { slug: string };
 type TPropsIdDefinition = { id: number | string };
 type TProps = TPropsSlugDefinition | TPropsIdDefinition;
+
+const getSondage = async (props: { slug: string; sessionSlug: string }) => {
+  const response = await axiosInstance.get<{ data: ITraining[] }>(
+    `/api/backoffice/Training/?fields=sessions.*,sessions.sondages.*,sessions.sondages.image.*,sessions.sondages.questions.*,sessions.sondages.questions.choix.*&filter[slug][_eq]=${props.slug}`
+  );
+  const training = response.data.data[0];
+  const session = training.sessions.find(
+    (s) => s.slug === props.sessionSlug
+  );
+
+  const sondage = session?.sondages.at(-1)
+
+
+  if (!sondage) {
+    return null;
+  }
+
+
+
+  return sondage;
+};
 
 const getTraining = async (props: TProps) => {
   let training = {} as ITraining;
@@ -27,4 +48,4 @@ const getTraining = async (props: TProps) => {
   return training;
 };
 
-export { getTraining };
+export { getTraining, getSondage };
