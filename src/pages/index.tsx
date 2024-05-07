@@ -1,12 +1,18 @@
 import { HomeLayout, HomeMain } from "@/components";
 import { getTrainings } from "@/services/endpoints/getTrainings";
 import { ITraining } from "@/types";
+import Head from "next/head";
 
 export default function Home({ trainings }: { trainings: ITraining[] }) {
   return (
-    <HomeLayout>
-      <HomeMain trainings={trainings} />
-    </HomeLayout>
+    <>
+      <Head>
+        <title> Acceuil | Formations Chillo</title>
+      </Head>
+      <HomeLayout>
+        <HomeMain trainings={trainings} />
+      </HomeLayout>
+    </>
   );
 }
 

@@ -1,4 +1,4 @@
-import { LinkContainer } from "@/components";
+import { LinkWrapper } from "@/components";
 import React, { useMemo } from "react";
 
 const HorizontalBar = ({
@@ -26,7 +26,7 @@ const HorizontalBar = ({
     >
       {links.map((link, index) => {
         return (
-          <LinkContainer href={link} key={`link-${index}`}>
+          <LinkWrapper href={link} key={`link-${index}`}>
             <div
               className="bg-gray-200 absolute h-[25px] w-[25px] rounded-[50%]"
               style={{
@@ -34,7 +34,7 @@ const HorizontalBar = ({
                 top: -12.5,
               }}
             ></div>
-          </LinkContainer>
+          </LinkWrapper>
         );
       })}
     </div>

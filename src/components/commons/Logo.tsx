@@ -3,13 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Logo = ({ size = "small" }: { size?: keyof typeof LogoSizes }) => {
+const Logo = ({ size = "medium" }: { size?: keyof typeof LogoSizes }) => {
   return (
     <div>
       <Link href="/">
         <Image
           loading="lazy"
-          src="/images/logo.png"
+          src="/images/chillo-services.webp"
           alt="formation-chillo.tech"
           {...LogoSizes[size]}
         />

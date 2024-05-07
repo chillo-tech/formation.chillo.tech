@@ -18,17 +18,24 @@ interface ITraining {
   subTitle: string;
   price: IPrice;
   description: any;
-  promotionVideo: string;
+  promotionVideo: IVideo;
+  textColor?: string;
   image: IImage;
   onSale: boolean;
   status: string;
+  isPreview: boolean;
+  skills: {
+    skills_id: ISkill;
+  }[];
   chapters: {
     Chapter_id: IChapter;
   }[];
   levels: {
     Training_Levels_id: ILevel;
   }[];
-  videos: any[];
+  videos: {
+    video_id: IVideo;
+  }[];
   metadatas: any[];
   objectives: {
     objective_id: IObjective;
@@ -43,18 +50,34 @@ interface ITraining {
   }[];
 }
 
-interface IImage {
-  id: number;
-  status: string;
-  user_created: string;
-  date_created: string;
+export interface IVideo {
   user_updated: string;
+  user_created: string;
+  id: string;
   date_updated: string;
+  date_created: string;
   link: string;
+  title: string;
   description: string;
-  backgroundColor?: string;
+  formation_id: any;
+  thumbnail: {
+    image_id: IImage;
+  }[];
+  trainings: number[];
+}
+
+export interface IImage {
+  user_updated: string;
+  user_created: string;
+  date_updated: string;
+  date_created: string;
+  backgroundColor: any;
   name: string;
-  videos: any[];
+  description: string;
+  link: string;
+  status: string;
+  id: number;
+  videos: number[];
 }
 
 interface IPrice {
@@ -82,6 +105,14 @@ interface IChapter {
   status: any;
   trainings: number[];
   Lessons: ILesson[];
+  skills: {
+    skills_id: ISkill;
+  }[];
+  rate?: number;
+  ratings?: number;
+  objectives?: {
+    objective_id: IObjective;
+  }[];
 }
 
 interface ILesson {
@@ -111,6 +142,15 @@ interface ILevel {
   title: string;
   description: string;
   trainings: number[];
+}
+
+interface ISkill {
+  id: number;
+  user_created: string;
+  date_created: string;
+  user_updated: string;
+  date_updated: string;
+  label: string;
 }
 
 interface IObjective {

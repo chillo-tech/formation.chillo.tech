@@ -17,7 +17,6 @@ const HomeMain = ({ trainings }: { trainings: ITraining[] }) => {
     <main className="flex flex-col justify-center">
       <Hero />
       <Statistics />
-      {/* <Presentation /> */}
       <WhyCodeWithMe />
       <div className="">
         <div className="container mx-auto">
@@ -30,7 +29,7 @@ const HomeMain = ({ trainings }: { trainings: ITraining[] }) => {
           <CoursesView trainings={state.trainings} />
         </div>
       </div>
-      <LearningPaths />
+      {/* <LearningPaths /> */}
       <Testimonials />
       <Pricings />
     </main>

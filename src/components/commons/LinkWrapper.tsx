@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const LinkContainer = ({
+const LinkWrapper = ({
   href,
   children,
 }: {
@@ -17,4 +17,4 @@ const LinkContainer = ({
   );
 };
 
-export { LinkContainer };
+export { LinkWrapper };

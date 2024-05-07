@@ -4,10 +4,10 @@ export interface IYear {
   label: string;
   title: string;
   subTitle?: string;
-  data: IData;
+  data: TYearData;
 }
 
-type IData =
+export type TYearData =
   | {
       type: "slider";
       children: TCard[];
@@ -18,13 +18,7 @@ type IData =
     }
   | {
       type: "mixed";
-      children: (
-        | TCard
-        | TCardRow
-        | TCardHideShow
-        | TLinksContainer
-        | TCardPlain
-      )[];
+      children: (TCard | TLinksContainer | TCardPlain)[];
     }
   | {
       type: "simple-slider";
