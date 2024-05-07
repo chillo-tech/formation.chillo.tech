@@ -1,3 +1,4 @@
+import { reducerTypeNames } from "@/data/context";
 import { TReducer, TState } from "@/types";
 
 const initialState: TState = {
@@ -5,7 +6,15 @@ const initialState: TState = {
 };
 
 const reducer: TReducer = (state, action) => {
-  return state;
+  switch (action.type) {
+    case reducerTypeNames.SET_TRAININGS:
+      return {
+        ...state,
+        trainings: action.payload,
+      };
+    default:
+      return state;
+  }
 };
 
 export { initialState, reducer };
