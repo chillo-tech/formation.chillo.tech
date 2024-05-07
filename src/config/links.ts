@@ -47,3 +47,9 @@ export const socials: Link[] = [
   linkInstagram,
   linkWhatsapp,
 ];
+
+export const siteLinks = {
+  HOME: "/",
+  ALL_TRAININGS: "/trainings",
+  CONTACT_US: "/contact-us",
+};
