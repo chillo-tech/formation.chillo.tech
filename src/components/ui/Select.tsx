@@ -21,7 +21,7 @@ const SelectContext = createContext<{
       selected: null | TOption;
     }>
   >;
-  setIsVisible: FUnction;
+  setIsVisible: Function;
   handleSelect: Function;
 }>({
   state: {

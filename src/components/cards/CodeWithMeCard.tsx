@@ -3,12 +3,12 @@ import { ISection } from "@/types";
 import Image from "next/image";
 import React from "react";
 
-const CodeWithMeCard = ({ section }: { section: ISection }) => {
+const LabelIconCard = ({ section }: { section: ISection }) => {
   return section.direction === "left" ? (
     <div className="flex flex-col sm:grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
       <div className="md:mx-4">
         <div className="flex items-center gap-5">
-          <div className="grid place-items-center w-12 h-12 rounded-full my-3 border border-[#838383de] bg-[#f0f0f0de]">
+          <div className="grid place-items-center w-12 h-12 shrink-0 rounded-full my-3 border border-[#838383de] bg-[#f0f0f0de]">
             {iconService.getIcon(section.iconName, {
               color: section.color,
             })}
@@ -20,7 +20,8 @@ const CodeWithMeCard = ({ section }: { section: ISection }) => {
             {section.label}
           </span>
         </div>
-        <h2 className="text-3xl">{section.title}</h2>
+        {/* @ts-ignore */}
+        <h2 className="text-3xl fontF-heading">{section.title.value}</h2>
         <p>{section.description}</p>
       </div>
       <div className="flex justify-center md:w-1/2 justify-self-center md:items-start items-center">
@@ -46,7 +47,7 @@ const CodeWithMeCard = ({ section }: { section: ISection }) => {
       </div>
       <div className="md:mx-4">
         <div className="flex items-center gap-5">
-          <div className="grid place-items-center w-12 h-12 rounded-full my-3 border border-[#838383de] bg-[#f0f0f0de]">
+          <div className="grid place-items-center w-12 h-12 shrink-0  rounded-full my-3 border border-[#838383de] bg-[#f0f0f0de]">
             {iconService.getIcon(section.iconName, {
               color: section.color,
             })}
@@ -58,11 +59,11 @@ const CodeWithMeCard = ({ section }: { section: ISection }) => {
             {section.label}
           </span>
         </div>
-        <h2 className="text-3xl">{section.title}</h2>
+        <h2 className="text-3xl fontF-heading">{section.title}</h2>
         <p>{section.description}</p>
       </div>
     </div>
   );
 };
 
-export { CodeWithMeCard };
+export { LabelIconCard };

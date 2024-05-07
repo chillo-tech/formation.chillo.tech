@@ -1,10 +1,10 @@
-import { LinkContainer } from "@/components";
+import { LinkWrapper } from "@/components";
 import { TCard } from "@/types";
 import Image from "next/image";
 
 const SimpleCard = ({ data }: { data: TCard }) => {
   return (
-    <LinkContainer href={data.link}>
+    <LinkWrapper href={data.link}>
       <div
         className="flex flex-col rounded-md shadow-md overflow-hidden shrink-0 h-full "
         style={{
@@ -20,7 +20,7 @@ const SimpleCard = ({ data }: { data: TCard }) => {
         />
         <p className="p-4">{data.title}</p>
       </div>
-    </LinkContainer>
+    </LinkWrapper>
   );
 };
 

@@ -5,3 +5,6 @@ export * from "./WhyCodeWithMe";
 export * from "./Testimonials";
 export * from "./Pricings";
 export * from "./LearningPaths";
+export * from "./TextSlides";
+export * from "./Statistics";
+export * from "./chillo.tech";

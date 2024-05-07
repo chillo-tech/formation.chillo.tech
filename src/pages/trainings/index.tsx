@@ -2,12 +2,18 @@ import { HomeLayout } from "@/components";
 import { AllTrainingsMain } from "@/components/commons/AllTrainingsMain";
 import { getTrainings } from "@/services/endpoints/getTrainings";
 import { ITraining } from "@/types";
+import Head from "next/head";
 
 const AllTrainings = ({ trainings }: { trainings: ITraining[] }) => {
   return (
-    <HomeLayout>
-      <AllTrainingsMain trainings={trainings} />
-    </HomeLayout>
+    <>
+      <Head>
+        <title> Tous nos cours | Formations Chillo </title>
+      </Head>
+      <HomeLayout>
+        <AllTrainingsMain trainings={trainings} />
+      </HomeLayout>
+    </>
   );
 };
 

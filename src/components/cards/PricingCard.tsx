@@ -1,27 +1,20 @@
-import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import { FaCheck } from "react-icons/fa6";
 
-const PricingSubscriptionCard = ({
+const PricingCard = ({
   pricing,
 }: {
   pricing: {
     label: string;
     price: string;
     options: string[];
+    suscribeMessage?: string;
+    subscribeLabel?: string;
   };
 }) => {
   return (
     <div className="relative w-full md:max-w-[450px] shadow-md rounded-md">
-      <div className="absolute -top-10 -left-3 md:-top-8 md:-left-3 lg:-left-10 lg:-top-12 w-24 z-10">
-        {/* <Image
-          src="/images/money-back.svg"
-          height={95}
-          width={95}
-          alt="money-back"
-        /> */}
-      </div>
+      <div className="absolute -top-10 -left-3 md:-top-8 md:-left-3 lg:-left-10 lg:-top-12 w-24 z-10"></div>
       <div className="border border-gray-100  transition-colors duration-200 ease-in-out overflow-hidden rounded-l relative ">
         <div className="w-full flex justify-center">
           <div className="w-3/4">
@@ -63,10 +56,10 @@ const PricingSubscriptionCard = ({
             className="group inline-block px-6 py-3 text-sm no-underline uppercase text-center text-white tracking-wider font-medium md:font-semibold rounded-full bg-gradient-to-r from-green-300 to-blue-500  transition-all duration-200 ease-out hover:text-white hover:no-underline undefined"
             href="#"
           >
-            Abonnez-vous et Economisez
+            {pricing.suscribeMessage || "Abonnez-vous et Economisez"}
           </Link>
-          <p className="my-2 text-sm font-semibold text-heading opacity-45">
-            Annulez à tout moment !
+          <p className="my-2 text-sm font-semibold text-heading !font-heading fontF-heading opacity-45">
+            {pricing.subscribeLabel || "Annulez à tout moment !"}
           </p>
         </div>
       </div>
@@ -74,4 +67,4 @@ const PricingSubscriptionCard = ({
   );
 };
 
-export { PricingSubscriptionCard };
+export { PricingCard };

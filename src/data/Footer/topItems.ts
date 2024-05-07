@@ -7,6 +7,7 @@ const footerTopItems = [
     ],
   },
   {
+    title: "",
     items: [
       { label: "Administration", path: "#" },
       { label: "Blog", path: "#" },

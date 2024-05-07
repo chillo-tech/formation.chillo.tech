@@ -1,16 +1,17 @@
 import React from "react";
-import { CodeWithMeCard, Heading } from "..";
+import { LabelIconCard, Heading } from "..";
 import { mockSections } from "@/data";
 
-const WhyCodeWithMe = () => {
+const WhyCodeWithMe = ({ article }: { article: any }) => {
+  console.log("article code with me", article);
   return (
-    <section className="container max-w-[1100px] mx-auto">
+    <section className="container mx-auto">
       <div className="container px-4">
-        <Heading title="Nos valeurs" />
+        <Heading title={article.title} />
         <div>
-          {mockSections.map((section, index) => {
+          {mockSections(article.sections).map((section, index) => {
             return (
-              <CodeWithMeCard
+              <LabelIconCard
                 key={`section-code-with-me-card-${index}`}
                 section={section}
               />

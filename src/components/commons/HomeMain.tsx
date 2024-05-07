@@ -3,7 +3,7 @@ import { ITraining } from "@/types";
 import {
   CoursesView,
   Heading,
-  Hero,
+  HomeHero,
   LearningPaths,
   Pricings,
   Statistics,
@@ -11,14 +11,22 @@ import {
   WhyCodeWithMe,
 } from "..";
 
-const HomeMain = ({ trainings }: { trainings: ITraining[] }) => {
+const HomeMain = ({
+  trainings,
+  articles,
+  statistics,
+}: {
+  trainings: ITraining[];
+  statistics: any;
+  articles: any;
+}) => {
+  console.log("articles home main", articles);
   const { state } = useHome({ trainings });
   return (
     <main className="flex flex-col justify-center">
-      <Hero />
-      <Statistics />
-      {/* <Presentation /> */}
-      <WhyCodeWithMe />
+      <HomeHero />
+      <Statistics statistics={statistics} />
+      <WhyCodeWithMe article={articles.articleNosValeurs} />
       <div className="">
         <div className="container mx-auto">
           <Heading
@@ -30,9 +38,13 @@ const HomeMain = ({ trainings }: { trainings: ITraining[] }) => {
           <CoursesView trainings={state.trainings} />
         </div>
       </div>
-      <LearningPaths />
+      {/* <LearningPaths /> */}
       <Testimonials />
-      <Pricings />
+      <Pricings
+        allAccessTraining={trainings.find(
+          (training) => training.type === "3"
+        )}
+      />
     </main>
   );
 };
